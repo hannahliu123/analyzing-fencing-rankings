@@ -10,6 +10,7 @@ from progress.bar import Bar
 from helper.soup_scraping import get_json_var_from_script
 from helper.caching_methods import save_dict_to_cache
 from helper.dataframe_columns import FENCERS_RANKINGS_MULTI_INDEX, FENCERS_RANKINGS_DF_COLS, FENCERS_BIO_DF_COLS
+from helper.sleep import polite_sleep
 
 CACHE_FILENAME = 'fencers/fencer_cache.txt'
 
@@ -38,6 +39,7 @@ def get_req_content(fencer_ID, use_req_cache=True):
     else:
         fencer_url = "https://fie.org/athletes/"+str(fencer_ID)
         req = requests.get(fencer_url)
+        polite_sleep()
         content = req.content
         with open(path_name, 'wb') as cache_file:
             cache_file.write(content)
@@ -178,6 +180,7 @@ def get_fencer_rankings_list_from_soup(soup, fencer_ID, url):
             weapon_value = weapon['value']
             weapon_url = url + "?weapon="+weapon_value
             weapon_req = requests.get(weapon_url)
+            polite_sleep()
             weapon_soup = BeautifulSoup(weapon_req.content, 'html.parser')
             # process page for weapon specific rankings
             fencer_weapon_rankings_list = get_fencer_weapon_rankings_list_from_soup(

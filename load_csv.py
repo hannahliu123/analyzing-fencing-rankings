@@ -2,7 +2,7 @@ import pandas as pd
 from helper.dataframe_columns import FENCERS_RANKINGS_DF_COLS, FENCERS_RANKINGS_MULTI_INDEX
 from helper.dataframe_columns import convert_list_to_dataframe_with_multi_index
 
-date = 'May_12_2021'
+date = 'Jun_21_2026'
 div_name = 'all_womens_foil'
 
 bout_df            = pd.read_csv('output/'+date+'/'+div_name+ '_bout_data_'            +date+'.csv')

@@ -3,7 +3,7 @@ import random
 from progress.bar import Bar
 import requests
 import math
-import json
+import json as json_parser
 from os import path, stat
 
 from helper.dataframe_columns import BOUTS_DF_COLS, TOURNAMENTS_DF_COLS, FENCERS_BIO_DF_COLS, FENCERS_RANKINGS_DF_COLS, FENCERS_RANKINGS_MULTI_INDEX
@@ -12,8 +12,19 @@ from tournaments.tournament_scraping import process_tournament_data_from_urls
 from fencers.fencer_scraping import get_fencer_data_lists_from_ID_list
 from helper.dataframe_columns import convert_list_to_dataframe_with_multi_index
 from helper.soup_scraping import get_search_params
+from helper.sleep import polite_sleep
 # from helper.caching_methods import save_dict_to_cache
 # from tournaments.tournament_data import TournamentData
+
+session = requests.Session()
+session.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    )
+})
+
 
 CACHE_FILENAME = 'tournaments/tournament_cache.txt'
 
@@ -69,15 +80,30 @@ def get_url_list_from_seach(search_params):
     # get first page of results and check if more pages needed
     search_params['fetchPage'] = 1
     search_url = 'https://fie.org/competitions/search'
-    req = requests.post(search_url, data=search_params)
-    json = req.json()
+    req = session.post(search_url, data=search_params)
+    polite_sleep()
+
+    # EDITING
+    cleaned_text = req.content.decode('utf-8-sig').strip()
+    json = json_parser.loads(cleaned_text)
+    # json = req.json()
+
     # json object sample in initial_testing/request_response.json
     pages_needed = math.ceil(json['totalFound']/json['pageSize'])
     url_list = add_tournament_urls_to_list(url_list, json['items'])
     for p in range(2, pages_needed+1):
         search_params['fetchPage'] = p
-        req = requests.post(search_url, data=search_params)
-        json = req.json()
+        req = session.post(search_url, data=search_params)
+        polite_sleep()
+
+        if req.status_code != 200:
+            print(f"STATUS CODE: {str(req.status_code)} --> Skipping page {str(p)}")
+            continue
+
+        cleaned_text2 = req.content.decode('utf-8-sig').strip()
+        json = json_parser.loads(cleaned_text2)
+        # json = req.json()
+
         url_list = add_tournament_urls_to_list(url_list, json['items'])
 
     return url_list

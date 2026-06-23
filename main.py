@@ -10,7 +10,6 @@ weapon = 'f'
 gender = 'f'
 category = ''
 
-
 weapon_dict = {'f': "foil", 'e': 'epee', 's': 'sabre'}
 gender_dict = {'f': "womens", 'm': 'mens'}
 category_dict = {'c': 'cadet', 'j': 'junior', 's':'senior', 'v':'veteran', '':'all'}

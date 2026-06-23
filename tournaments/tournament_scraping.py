@@ -5,12 +5,14 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from os import path, stat
 from progress.bar import Bar
+import time
 
 from helper.dataframe_columns import BOUTS_DF_COLS
 from pools.pool_scraping import get_pool_data_from_dict
 from tournaments.tournament_data import TournamentData
 from helper.soup_scraping import get_json_var_from_script
 from helper.caching_methods import load_all_cached_fencers_rankings, save_dict_to_cache
+from helper.sleep import polite_sleep
 
 
 CACHE_FILENAME = 'tournaments/tournament_cache.txt'
@@ -29,11 +31,26 @@ def get_req_content(tournament_url):
         tournement_url_pieces[-2])+"-" + str(tournement_url_pieces[-1])
     path_name = "tournaments/tournament_pages/" + tournament_filename + ".txt"
     if not path.exists(path_name):
-        fencer_url = "https://fie.org/tournament_pages/" + tournament_filename + ".txt"
-        req = requests.get(tournament_url)
-        content = req.content
-        with open(path_name, 'wb') as cache_file:
-            cache_file.write(content)
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                # fencer_url = "https://fie.org/tournament_pages/" + tournament_filename + ".txt"
+                req = requests.get(tournament_url)
+                polite_sleep(4.0, 10.0)
+                content = req.content
+                with open(path_name, 'wb') as cache_file:
+                    cache_file.write(content)
+                return content
+            except:
+                wait = (2 ** attempt) * 10  # 10s, 20s, 40s, 80s, 160s
+                print(f"\n  [connection error] Attempt {attempt + 1}/{max_retries} "
+                        f"failed for {tournament_url}")
+                print(f"  [connection error] Waiting {wait}s before retry...")
+                time.sleep(wait)
+        # if we get here that means all retries failed... :(
+        print(f"\n  [connection error] All {max_retries} retries failed for {tournament_url}")
+        print(f"  [connection error] Returning empty content, tournament will be skipped")
+        return b""  # empty bytes
     else:
         with open(path_name, 'rb') as cache_file:
             content = cache_file.read()
@@ -119,8 +136,18 @@ def create_tournament_data_from_url(tournament_url):
     soup = BeautifulSoup(content, 'html.parser')
 
     # each get json variables of the form window._XXXX
-    pools_list = get_json_var_from_script(
-        soup=soup, script_id="js-competition", var_name="window._pools ")['pools']
+    pools_result = get_json_var_from_script(
+        soup=soup, script_id="js-competition", var_name="window._pools ")
+    if pools_result == None:
+        return False, TournamentData(pools_list=[],
+                                     fencers_dict={},
+                                     missing_results_flag="server error page",
+                                     **{"competition_ID": 0, "season": 0, "name": "",
+                                        "category": "", "country": "", "start_date": "",
+                                        "end_date": "", "weapon": "", "gender": "",
+                                        "timezone": "", "url": tournament_url,
+                                        "unique_ID": "0-0"})
+    pools_list = pools_result['pools']
     comp = get_json_var_from_script(
         soup=soup, script_id="js-competition", var_name="window._competition ")
     athlete_dict_list = get_json_var_from_script(
@@ -234,15 +261,19 @@ def load_tournament_data(list_of_urls, tournaments_dict_list, bouts_dict_list, f
                 # print("\nfound a tournamnet with missing data: {} ".format(tournament_url))
                 # print("missing data flag is: \'{}\'".format(tournament_info_dict['missing_results_flag']))
 
-            dict_to_cache = {**tournament_info_dict, 'bout_list': tournament_bout_dict_list,
-                             'fencer_list': tournament_fencer_ID_list}
-            save_dict_to_cache(
-                CACHE_FILENAME, tournament_url, dict_to_cache)
+            if tournament_info_dict.get('missing_results_flag') != 'server error page':
+                dict_to_cache = {**tournament_info_dict, 'bout_list': tournament_bout_dict_list,
+                                'fencer_list': tournament_fencer_ID_list}
+                save_dict_to_cache(
+                    CACHE_FILENAME, tournament_url, dict_to_cache)
+            else:
+                print(f"\n  [cache debug] Skipping cache for {tournament_url} — server error page")
         # append tournament data to the list
         temp_fencer_list = list(
             set(temp_fencer_list+tournament_fencer_ID_list))
         bouts_dict_list += tournament_bout_dict_list
-        tournaments_dict_list.append(tournament_info_dict)
+        if tournament_info_dict.get('missing_results_flag') != 'server error page':
+            tournaments_dict_list.append(tournament_info_dict)
     fencer_ID_list += temp_fencer_list
 
 

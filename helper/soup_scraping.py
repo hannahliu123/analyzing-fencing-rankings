@@ -12,8 +12,8 @@ def get_json_var_from_script(soup, script_id, var_name):
     try: 
         script = next(soup.find('script', id=script_id).children)
     except:
-        print("Could not find script with id \'{}\' from soup {}".format(script_id,soup))
-        return ""
+        print("Could not find script with id \'{}\' from soup".format(script_id))
+        return None
     
     var_list = script.split(';')
     # get var_name Data (may be list or dict)
@@ -23,6 +23,7 @@ def get_json_var_from_script(soup, script_id, var_name):
         json_variable = json.loads(var_string.split(" = ")[1])
     except:
         print("Error exctracting variable {} from list {}".format(var_name, var_list))
+        return None
     return json_variable
 
 
