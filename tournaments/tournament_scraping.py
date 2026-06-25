@@ -46,7 +46,7 @@ def get_req_content(tournament_url):
                 print(f"\n  [connection error] Attempt {attempt + 1}/{max_retries} "
                         f"failed for {tournament_url}")
                 print(f"  [connection error] Waiting {wait}s before retry...")
-                time.sleep(wait)
+                polite_sleep(wait, wait+5)
         # if we get here that means all retries failed... :(
         print(f"\n  [connection error] All {max_retries} retries failed for {tournament_url}")
         print(f"  [connection error] Returning empty content, tournament will be skipped")
@@ -141,6 +141,7 @@ def create_tournament_data_from_url(tournament_url):
     if pools_result == None:
         return False, TournamentData(pools_list=[],
                                      fencers_dict={},
+                                     tableau_list=[],
                                      missing_results_flag="server error page",
                                      **{"competition_ID": 0, "season": 0, "name": "",
                                         "category": "", "country": "", "start_date": "",
@@ -148,6 +149,8 @@ def create_tournament_data_from_url(tournament_url):
                                         "timezone": "", "url": tournament_url,
                                         "unique_ID": "0-0"})
     pools_list = pools_result['pools']
+    tableau_result = get_json_var_from_script(  # might be None if the tournament doens't have DE data
+        soup=soup, script_id="js-competition", var_name="window._tableau ")
     comp = get_json_var_from_script(
         soup=soup, script_id="js-competition", var_name="window._competition ")
     athlete_dict_list = get_json_var_from_script(
@@ -177,16 +180,58 @@ def create_tournament_data_from_url(tournament_url):
     if not has_results_data:
         return False, TournamentData(pools_list=[],
                                      fencers_dict={},
+                                     tableau_list=[],
                                      missing_results_flag=missing_results_flag,
                                      ** tournament_dict)
 
     # CREATE TOURNAMENT DATACLASS TO RETURN
     tournament = TournamentData(
         pools_list=poolData_list,
+        tableau_list=tableau_result or [],
         fencers_dict=tournament_athlete_dict,
         **tournament_dict
     )
     return has_results_data, tournament
+
+def compile_de_bout_list_from_tableau(tournament_data):
+    bout_list = []  # list of all DE bouts
+    tournament_ID = tournament_data.unique_ID
+    tournament_season = tournament_data.season
+    start_date = tournament_data.start_date
+    
+    for suite in tournament_data.tableau_list:
+        for round_name, bouts in suite['rounds'].items():
+            for bout in bouts:
+                if bout.get('isBye'):
+                    continue
+                
+                f1 = bout['fencer1']
+                f2 = bout['fencer2']
+                f1_ID = f1['id']
+                f2_ID = f2['id']
+                winner_ID = f1['id'] if f1['isWinner'] else f2['id']
+
+                f1_data = tournament_data.fencers_dict.get(f1_ID)
+                f2_data = tournament_data.fencers_dict.get(f2_ID)
+                fencer_age = None if f1_data is None else f1_data.get('age')
+                opponent_age = None if f2_data is None else f2_data.get('age')
+
+                fencer_curr_points = None if f1_data is None else f1_data.get('points_before_event')
+                opponent_curr_points = None if f2_data is None else f2_data.get('points_before_event')
+                upset = True if (fencer_curr_points is not None and opponent_curr_points is not None and ((
+                    opponent_curr_points > fencer_curr_points) and winner_ID == f1_ID or (
+                    opponent_curr_points < fencer_curr_points) and winner_ID == f2_ID)) else False
+                
+                bout_list.append({
+                    'fencer_ID': f1_ID, 'opp_ID': f2_ID, 'season': tournament_season,
+                    'fencer_score': f1['score'], 'opp_score': f2['score'],
+                    'winner_ID': winner_ID, 'tournament_ID': tournament_ID,
+                    'date': start_date, 'bout_type': 'DE', 'round': round_name,
+                    'pool_ID': None, 'upset': upset, 'fencer_age': fencer_age, 'opp_age': opponent_age, 
+                    'fencer_curr_pts': fencer_curr_points, 'opp_curr_pts': opponent_curr_points
+                })
+    
+    return bout_list
 
 
 def compile_bout_dict_list_from_tournament_data(tournament_data):
@@ -195,6 +240,7 @@ def compile_bout_dict_list_from_tournament_data(tournament_data):
     """
     bout_list = []
     tournament_ID = tournament_data.unique_ID
+    tournament_season = tournament_data.season
 
     for pool in tournament_data.pools_list:
         pool_ID = pool.pool_ID
@@ -219,7 +265,8 @@ def compile_bout_dict_list_from_tournament_data(tournament_data):
                                   'fencer_age': fencer_age, 'opp_age': opponent_age,
                                   'fencer_score': fencer_score, 'opp_score': opponent_score, 'winner_ID': winner_ID,
                                   'fencer_curr_pts': fencer_curr_points, 'opp_curr_pts': opponent_curr_points,
-                                  'tournament_ID': tournament_ID, 'pool_ID': pool_ID, 'upset': upset, 'date': date})
+                                  'tournament_ID': tournament_ID, 'pool_ID': pool_ID, 'upset': upset, 'date': date,
+                                  'bout_type': 'pool', 'round': None, 'season': tournament_season })
     return bout_list
 
 
@@ -250,6 +297,8 @@ def load_tournament_data(list_of_urls, tournaments_dict_list, bouts_dict_list, f
                 tournament_url)
             if has_results_data:
                 tournament_bout_dict_list = compile_bout_dict_list_from_tournament_data(
+                    tournament_data)
+                tournament_bout_dict_list += compile_de_bout_list_from_tableau(
                     tournament_data)
                 tournament_info_dict = tournament_data.create_tournament_dict()
                 tournament_fencer_ID_list = list(

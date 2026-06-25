@@ -40,6 +40,7 @@ class TournamentData:
     url: str
 
     pools_list: list[PoolData]
+    tableau_list: list[dict]
     fencers_dict: dict
 
     missing_results_flag : str = ""

@@ -13,7 +13,8 @@ TOURNAMENTS_DF_COLS = ['competition_ID', 'season', 'name', 'category', 'country'
 # date is the date of the bout, approximated by the start date of the tournament
 BOUTS_DF_COLS = ['fencer_ID', 'opp_ID', 'fencer_age', 'opp_age',
                  'fencer_score', 'opp_score', 'winner_ID', 'fencer_curr_pts',
-                 'opp_curr_pts', 'tournament_ID', 'pool_ID', 'upset', 'date']
+                 'opp_curr_pts', 'tournament_ID', 'pool_ID', 'upset', 'date', 
+                 'round', 'bout_type', 'season']
 
 # country_code is three letter code for a fencer's country
 # country is the full name of the fencer's country
