@@ -247,18 +247,21 @@ def compile_bout_dict_list_from_tournament_data(tournament_data):
         date = tournament_data.start_date
         for i in range(0, pool.pool_size):
             fencer_ID = pool.fencer_IDs[i]
-            fencer_age = tournament_data.fencers_dict[fencer_ID]['age']
-            fencer_curr_points = tournament_data.fencers_dict[fencer_ID]['points_before_event']
+            fencer_data = tournament_data.fencers_dict.get(fencer_ID, {})
+            fencer_age = fencer_data.get('age', None)
+            fencer_curr_points = fencer_data.get('points_before_event', None)
             for j in range(i+1, pool.pool_size):
                 # gather bout data
                 opponent_ID = pool.fencer_IDs[j]
-                opponent_age = tournament_data.fencers_dict[opponent_ID]['age']
-                opponent_curr_points = tournament_data.fencers_dict[opponent_ID]['points_before_event']
+                opponent_data = tournament_data.fencers_dict.get(opponent_ID, {})
+                opponent_age = opponent_data.get('age', None)
+                opponent_curr_points = opponent_data.get('points_before_event', None)
                 fencer_score = pool.scores[i][j]
                 opponent_score = pool.scores[j][i]
                 winner_ID = fencer_ID if pool.winners[i][j] == 1 else opponent_ID
-                upset = True if ((opponent_curr_points > fencer_curr_points) and winner_ID == fencer_ID or (
-                    opponent_curr_points < fencer_curr_points) and winner_ID == opponent_ID) else False
+                upset = True if (fencer_curr_points is not None and opponent_curr_points is not None and ((
+                    opponent_curr_points > fencer_curr_points) and winner_ID == fencer_ID or (
+                    opponent_curr_points < fencer_curr_points) and winner_ID == opponent_ID)) else False
 
                 # add bout entry as row in dataframe
                 bout_list.append({'fencer_ID': fencer_ID, 'opp_ID': opponent_ID,
