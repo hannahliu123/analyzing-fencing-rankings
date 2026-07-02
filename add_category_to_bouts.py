@@ -1,4 +1,10 @@
-from load_csv import tournament_df, bout_df, date, div_name
+import pandas as pd
+
+date = 'Jun_30_2026'
+div_name = 'all_mens_foil'
+
+bout_df            = pd.read_csv('output/'+date+'/'+div_name+ '_bout_data_'            +date+'.csv')
+tournament_df      = pd.read_csv('output/'+date+'/'+div_name+ '_tournament_data_'      +date+'.csv')
 
 bout_df = bout_df.merge(
     tournament_df[['unique_ID', 'category']],
@@ -9,5 +15,4 @@ bout_df = bout_df.merge(
 
 bout_df.to_csv(f'output/{date}/{div_name}_bout_data_{date}.csv', index=False)
 
-print(bout_df.columns.tolist())  # verify category is there
-print(bout_df['category'].value_counts())  # verify it populated correctly
+print("DONE adding category column!")

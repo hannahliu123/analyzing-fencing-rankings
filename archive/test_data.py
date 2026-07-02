@@ -1,4 +1,4 @@
-from load_csv import tournament_df, bout_df, fencer_bio_df, fencer_rankings_df
+from archive.load_csv import tournament_df, bout_df, fencer_bio_df, fencer_rankings_df
 
 print("Tournaments:", tournament_df.shape)
 print("Bouts:", bout_df.shape)

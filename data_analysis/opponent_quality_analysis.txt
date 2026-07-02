@@ -1,0 +1,55 @@
+
+=====================================================================================
+  OPPONENT QUALITY — Womens Sabre FIE ranks 64-128
+  Population size: 65 fencers
+=====================================================================================
+  POOLS    — avg opp rank: 176.5	|  avg upset rate: 37.9%	|  avg upsets: 3.63
+  DE       — avg opp rank: 96.3	|  avg upset rate: 19.4%	|  avg upsets: 1.26
+  Combined — avg opp rank: 156.9	|  avg upset rate: 31.1%	|  avg upsets: 4.89
+
+--------- OUTLIERS (underranked by FIE) ---------
+
+  DI CARLO Alessia (FIE rank #68, PR Rank #13)
+    POOLS: avg_opp_rank=198.8	n_bouts=46.0	vs_better=7.0	upsets=0.0	upset_rate=0.0%
+    DE:    avg_opp_rank=90.0	n_bouts=24.0	vs_better=11.0	upsets=6.0	upset_rate=54.5%
+    COMB:  avg_opp_rank=161.5	n_bouts=70.0	vs_better=18.0	upsets=6.0	upset_rate=33.3%
+
+  KIKUCHI Kokona (FIE rank #103, PR Rank #30)
+    POOLS: avg_opp_rank=185.9	n_bouts=42.0	vs_better=10.0	upsets=6.0	upset_rate=60.0%
+    DE:    avg_opp_rank=112.8	n_bouts=15.0	vs_better=9.0	upsets=3.0	upset_rate=33.3%
+    COMB:  avg_opp_rank=166.6	n_bouts=57.0	vs_better=19.0	upsets=9.0	upset_rate=47.4%
+
+  WEI Jiayi (FIE rank #126, PR Rank #56)
+    POOLS: avg_opp_rank=198.2	n_bouts=41.0	vs_better=10.0	upsets=3.0	upset_rate=30.0%
+    DE:    avg_opp_rank=78.0	n_bouts=12.0	vs_better=8.0	upsets=3.0	upset_rate=37.5%
+    COMB:  avg_opp_rank=171.0	n_bouts=53.0	vs_better=18.0	upsets=6.0	upset_rate=33.3%
+
+=====================================================================================
+  OPPONENT QUALITY — Mens Sabre FIE ranks 128-256
+  Population size: 129 fencers
+=====================================================================================
+  POOLS    — avg opp rank: 249.9	|  avg upset rate: 33.2%	|  avg upsets: 3.48
+  DE       — avg opp rank: 147.4	|  avg upset rate: 18.3%	|  avg upsets: 0.84
+  Combined — avg opp rank: 228.4	|  avg upset rate: 29.8%	|  avg upsets: 4.33
+
+--------- OUTLIERS (underranked by FIE) ---------
+
+  D'ARMIENTO Francesco (FIE rank #224, PR Rank #70)
+    POOLS: avg_opp_rank=459.9	n_bouts=18.0	vs_better=3.0	upsets=2.0	upset_rate=66.7%
+    DE:    avg_opp_rank=280.9	n_bouts=12.0	vs_better=4.0	upsets=2.0	upset_rate=50.0%
+    COMB:  avg_opp_rank=388.3	n_bouts=30.0	vs_better=7.0	upsets=4.0	upset_rate=57.1%
+
+  XU Haojun (FIE rank #189, PR Rank #47)
+    POOLS: avg_opp_rank=300.2	n_bouts=23.0	vs_better=10.0	upsets=2.0	upset_rate=20.0%
+    DE:    avg_opp_rank=293.2	n_bouts=10.0	vs_better=4.0	upsets=3.0	upset_rate=75.0%
+    COMB:  avg_opp_rank=298.1	n_bouts=33.0	vs_better=14.0	upsets=5.0	upset_rate=35.7%
+
+  TSUBO Hayato (FIE rank #139, PR Rank #63)
+    POOLS: avg_opp_rank=319.6	n_bouts=41.0	vs_better=12.0	upsets=6.0	upset_rate=50.0%
+    DE:    avg_opp_rank=185.3	n_bouts=13.0	vs_better=6.0	upsets=1.0	upset_rate=16.7%
+    COMB:  avg_opp_rank=287.3	n_bouts=54.0	vs_better=18.0	upsets=7.0	upset_rate=38.9%
+
+  VIGH Benedek (FIE rank #194, PR Rank #104)
+    POOLS: avg_opp_rank=310.7	n_bouts=51.0	vs_better=21.0	upsets=6.0	upset_rate=28.6%
+    DE:    avg_opp_rank=346.8	n_bouts=12.0	vs_better=4.0	upsets=1.0	upset_rate=25.0%
+    COMB:  avg_opp_rank=317.6	n_bouts=63.0	vs_better=25.0	upsets=7.0	upset_rate=28.0%

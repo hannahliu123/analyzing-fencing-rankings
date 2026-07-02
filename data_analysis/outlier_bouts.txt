@@ -1,0 +1,648 @@
+
+======================================================================
+  DI CARLO Alessia (ITALY) - 45303
+  FIE Rank: 68  |  PageRank: 13  |  Diff: 55
+  Total Tournaments: 8
+  70 Total Bouts:	42W, 28L (60.0%)
+  46 Pool Bouts:	26W, 20L
+  24 DE Bouts:		16W, 8L
+======================================================================
+
+  [Coupe du Monde — Algeria]
+  Pools: 5/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    WEI Jiayi                    #126          #56
+  pool  pool   WIN     5-4    POUPINET Anne                #206          #170
+  pool  pool   WIN     5-0    KEREM Zehra                  #451          #418
+  pool  pool   WIN     5-0    LAKHOUA Salma                #479          #481
+  pool  pool   WIN     5-4    BRIND'AMOUR Pamela           #277          #244
+  pool  pool   WIN     5-1    POTTER Sophia                #240          #163
+  DE    B64    WIN     15-5   ZHANG Xinyi                  #43           #37
+  DE    B32    LOSS    14-15  NOUTCHA Sarah                #3            #3
+
+  [Grand Prix — Tunisia]
+  Pools: 3/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    BATTAI Sugar Katinka         #7            #7
+  pool  pool   LOSS    3-5    KO Polina                    #434          #259
+  pool  pool   LOSS    3-5    KOBAYASHI Kanae              #108          #69
+  pool  pool   WIN     5-1    MASKHI Chaima                #456          #384
+  pool  pool   WIN     5-0    SAYLES Nina                  #148          #135
+  pool  pool   WIN     5-3    IVANOVA Beloslava            #133          #86
+  DE    B64    LOSS    13-15  SZUCS Luca                   #15           #15
+  DE    A64    WIN     15-12  TORI Toscane                 #17           #10
+
+  [Coupe du Monde — Egypt]
+  Pools: 2/5  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    SIT Summer Fay               #47           #40
+  pool  pool   LOSS    3-5    WATOR Angelika               #58           #60
+  pool  pool   WIN     5-2    MOROS Andrea                 #136          #229
+  pool  pool   WIN     5-2    ISSABEKOVA Dilyara           #276          #216
+  pool  pool   LOSS    4-5    HERBON Felice                #83           #79
+  DE    A128   WIN     15-13  SARYBAY Aigerim              #50           #59
+  DE    B64    LOSS    9-15   GKOUNTOURA Theodora          #22           #35
+  DE    A64    WIN     15-9   DOMONKOS Emese               #235          #178
+
+  [GRAND PRIX NUOMA  — France]
+  Pools: 2/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-3    BHARAD Kashish Deepak        #507          #504
+  pool  pool   LOSS    2-5    KESZEI Kira                  #117          #132
+  pool  pool   LOSS    4-5    KANETAKA Seisa               #289          #265
+  pool  pool   LOSS    3-5    CIESLAR Zuzanna              #13           #18
+  pool  pool   WIN     5-0    LEGARET Emmy                 #497          #422
+  pool  pool   LOSS    3-5    HUSEYNOVA Zarifa             #143          #111
+  DE    A128   WIN     15-12  FUSETTI Carlotta             #82           #71
+  DE    B64    LOSS    14-15  KHARLAN Olga                 #160          #161
+  DE    A64    WIN     15-7   COUDERC Annah                #234          #176
+
+  [Grand Prix — Republic of Korea]
+  Pools: 3/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-2    KUNASHEVA Malena             #220          #196
+  pool  pool   LOSS    4-5    GULIK Anastassiya            #34           #39
+  pool  pool   WIN     5-1    YUN Soyeon                   #131          #122
+  pool  pool   WIN     5-3    PAUL Lila                    #278          #190
+  pool  pool   LOSS    1-5    TAN Kai Li Christine         #144          #154
+  pool  pool   LOSS    1-5    PAN Qimiao                   #18           #14
+  DE    A128   WIN     15-13  WEI Jiayi                    #126          #56
+  DE    A64    LOSS    13-15  KATONA Renata                #14           #17
+
+  [Coupe du Monde — Greece]
+  Pools: 4/6  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-1    MAKLIN Sofia                 #525          #477
+  pool  pool   WIN     5-1    LEUNG Lok Man Laren          #94           #72
+  pool  pool   LOSS    2-5    HNIDASHEVA Valeriia          #244          #149
+  pool  pool   WIN     5-3    SPIESZ Anna                  #61           #47
+  pool  pool   LOSS    0-5    FU Ying                      #28           #22
+  pool  pool   WIN     5-0    ISSABEKOVA Dilyara           #276          #216
+  DE    A128   WIN     15-8   TANZMEISTER Franziska        #351          #350
+  DE    B64    WIN     15-8   DAYIBEKOVA Zaynab            #23           #33
+  DE    B32    LOSS    8-15   AIME Amalia                  #107          #85
+  DE    A64    WIN     15-9   GRAUDINS Victoria            #182          #114
+
+  [Coupe du Monde — Bulgaria]
+  Pools: 5/6  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-2    MALGREM Klaudia              #228          #188
+  pool  pool   WIN     5-4    WEBER Christine              #191          #130
+  pool  pool   WIN     5-1    MEDARSKA Sofia-Aleksandra    #385          #317
+  pool  pool   WIN     5-1    KUVAEVA Alexandra            #118          #66
+  pool  pool   WIN     5-3    KIM Eunsun                   #127          #80
+  pool  pool   LOSS    0-5    OZAKI Seri                   #39           #53
+  DE    B64    WIN     15-9   LANDI Michela                #77           #55
+  DE    B32    WIN     15-11  NOUTCHA Sarah                #3            #3
+  DE    B16    LOSS    13-15  MORMILE Chiara               #25           #11
+  DE    A64    WIN     15-14  GALLARDO Itziar              #158          #126
+
+  [Coupe du Monde — Peru]
+  Pools: 2/5  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    AIME Amalia                  #107          #85
+  pool  pool   WIN     5-3    HERBON Felice                #83           #79
+  pool  pool   LOSS    1-5    SPIESZ Anna                  #61           #47
+  pool  pool   WIN     5-4    ANDRES Charmaine             #235          #214
+  pool  pool   LOSS    3-5    LUI Sum Yi Katy              #287          #223
+  DE    A128   WIN     15-3   CABEZAS Florencia            #152          #279
+  DE    B64    WIN     15-8   JEON Hayoung                 #4            #4
+  DE    B32    LOSS    9-15   TRANQUILLE Lola              #63           #48
+  DE    A64    WIN     15-12  CIESLAR Zuzanna              #13           #18
+
+======================================================================
+  KIKUCHI Kokona (JAPAN) - 55162
+  FIE Rank: 103  |  PageRank: 30  |  Diff: 73
+  Total Tournaments: 7
+  57 Total Bouts:	36W, 21L (63.2%)
+  42 Pool Bouts:	28W, 14L
+  15 DE Bouts:		8W, 7L
+======================================================================
+
+  [Grand Prix — Tunisia]
+  Pools: 5/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    WILLIAMS Chloe               #224          #231
+  pool  pool   WIN     5-1    BREER Jana                   #297          #304
+  pool  pool   WIN     5-3    CORTEYN Jolien               #150          #119
+  pool  pool   WIN     5-2    DAGHFOUS Yasmine             #348          #336
+  pool  pool   WIN     5-4    RIFKISS Margaux              #97           #99
+  pool  pool   WIN     5-2    KIM Eunsun                   #127          #80
+  DE    B64    LOSS    6-15   RAO Xueyi                    #38           #36
+
+  [Coupe du Monde — Egypt]
+  Pools: 4/6  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    1-5    LUPU Andreea                 #45           #27
+  pool  pool   WIN     5-4    ZHUANG Chenyi                #125          #105
+  pool  pool   WIN     5-1    YANG Angelina                #311          #278
+  pool  pool   LOSS    2-5    WIECKIEWICZ Maria            #243          #169
+  pool  pool   WIN     5-0    LIU Yifei                    #291          #324
+  pool  pool   WIN     5-2    KARIMOVA Sabina              #64           #77
+  DE    A128   WIN     15-11  AAKHRI Aakhri                #325          #363
+  DE    B64    WIN     15-13  CIESLAR Zuzanna              #13           #18
+  DE    B32    LOSS    8-15   DAYIBEKOVA Zaynab            #23           #33
+  DE    A64    WIN     15-6   FUSETTI Carlotta             #82           #71
+
+  [GRAND PRIX NUOMA  — France]
+  Pools: 4/6  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    0-5    SKARBONKIEWICZ Magda         #214          #256
+  pool  pool   WIN     5-4    BREER Jana                   #297          #304
+  pool  pool   WIN     5-3    PARK Hyejin                  #506          #501
+  pool  pool   WIN     5-2    GULIK Anastassiya            #34           #39
+  pool  pool   LOSS    2-5    RIOUX Cyrielle               #115          #95
+  pool  pool   WIN     5-4    LAU Yee Ching                #268          #221
+  DE    A128   WIN     15-5   PORADA Zuzanna               #229          #158
+  DE    B64    WIN     15-14  NOUTCHA Sarah                #3            #3
+  DE    B32    LOSS    9-15   SEO Jiyeon                   #40           #29
+  DE    A64    WIN     15-10  KOUROUSI  Anna Kalliopi      #184          #141
+
+  [Grand Prix — Republic of Korea]
+  Pools: 2/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    2-5    GONTSOVA Daria               #106          #103
+  pool  pool   WIN     5-3    KIM Eunsun                   #127          #80
+  pool  pool   LOSS    4-5    SRINUALAD Bandhita           #192          #213
+  pool  pool   LOSS    3-5    LUI Sum Yi Katy              #287          #223
+  pool  pool   WIN     5-3    PASSARO Eloisa               #33           #23
+  pool  pool   LOSS    3-5    CORTEYN Jolien               #150          #119
+  DE    A128   LOSS    11-15  HENG Juliet Jie Min          #41           #41
+
+  [Coupe du Monde — Greece]
+  Pools: 4/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-1    MOROS Andrea                 #136          #229
+  pool  pool   WIN     5-3    POTTER Sophia                #240          #163
+  pool  pool   WIN     5-1    KARIMOVA Sabina              #64           #77
+  pool  pool   LOSS    2-5    PAUL Lila                    #278          #190
+  pool  pool   LOSS    0-5    SEO Jiyeon                   #40           #29
+  pool  pool   WIN     5-2    LIN Kesi                     #124          #94
+  DE    A128   WIN     15-12  YE Minhui                    #149          #118
+  DE    A64    LOSS    9-15   HENG Juliet Jie Min          #41           #41
+
+  [Coupe du Monde — Bulgaria]
+  Pools: 4/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    1-5    LEE Alexandra                #54           #91
+  pool  pool   WIN     5-4    KARIMOVA Sabina              #64           #77
+  pool  pool   LOSS    1-5    VIALE  Mariella              #24           #20
+  pool  pool   WIN     5-2    SERIKBAY Adema               #494          #438
+  pool  pool   WIN     5-2    SIVA KUMAR Thhivya Ashti     #363          #271
+  pool  pool   WIN     5-3    VENTURA Maria                #147          #106
+  DE    A128   WIN     15-12  FREEDMAN Janna               #321          #294
+  DE    A64    LOSS    14-15  CRISCIO Martina              #80           #58
+
+  [Coupe du Monde — Peru]
+  Pools: 5/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-4    CORTEYN Jolien               #150          #119
+  pool  pool   WIN     5-3    ROSALES Nina                 #481          #465
+  pool  pool   WIN     5-3    SHOKIROVA Samira             #96           #129
+  pool  pool   WIN     5-1    BELTRAN ROJAS Valentina      #159          #305
+  pool  pool   WIN     5-3    ZHANG Xinyi                  #43           #37
+  pool  pool   LOSS    1-5    MOCCI Vittoria               #198          #198
+  DE    A64    LOSS    6-15   KRAVATSKA Olena              #123          #133
+
+======================================================================
+  WEI Jiayi (CHINA) - 58644
+  FIE Rank: 126  |  PageRank: 56  |  Diff: 70
+  Total Tournaments: 7
+  53 Total Bouts:	33W, 20L (62.3%)
+  41 Pool Bouts:	28W, 13L
+  12 DE Bouts:		5W, 7L
+======================================================================
+
+  [Coupe du Monde — Algeria]
+  Pools: 5/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    POUPINET Anne                #206          #170
+  pool  pool   WIN     5-3    DI CARLO Alessia             #68           #13
+  pool  pool   WIN     5-4    KEREM Zehra                  #451          #418
+  pool  pool   WIN     5-1    LAKHOUA Salma                #479          #481
+  pool  pool   WIN     5-4    BRIND'AMOUR Pamela           #277          #244
+  pool  pool   WIN     5-4    POTTER Sophia                #240          #163
+  DE    A64    LOSS    11-15  SPICA Manuela                #65           #51
+
+  [Grand Prix — Tunisia]
+  Pools: 3/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    2-5    LANDI Michela                #77           #55
+  pool  pool   WIN     5-1    KOBZEVA Valeria              #128          #102
+  pool  pool   LOSS    3-5    GREENBAUM Atara              #177          #137
+  pool  pool   WIN     5-2    HERNANDEZ  Elena             #57           #45
+  pool  pool   LOSS    4-5    COUDERC Annah                #234          #176
+  pool  pool   WIN     5-3    TAKAHASHI Chirika            #135          #88
+  DE    A64    LOSS    8-15   KOBAYASHI Kanae              #108          #69
+
+  [Coupe du Monde — Egypt]
+  Pools: 5/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    CRISCIO Martina              #80           #58
+  pool  pool   WIN     5-1    AHAMIAN Yeva                 unranked      #420
+  pool  pool   WIN     5-2    PERRONI Maria Alicia         #111          #142
+  pool  pool   WIN     5-3    KIM Eunsun                   #127          #80
+  pool  pool   WIN     5-3    GRAUDINS Victoria            #182          #114
+  pool  pool   WIN     5-4    HAMAD Rawda                  #510          #490
+  DE    A64    LOSS    14-15  BAKASTOVA Yuliia             #114          #98
+
+  [Grand Prix — Republic of Korea]
+  Pools: 3/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    QUEROLI Caroline             #62           #46
+  pool  pool   LOSS    1-5    TAKAHASHI Chirika            #135          #88
+  pool  pool   WIN     5-3    SOMPHAO Arisara              #174          #242
+  pool  pool   WIN     5-1    PENG Tzu Shan                #223          #403
+  pool  pool   WIN     5-4    SERGEEVA Milena              #132          #100
+  pool  pool   LOSS    0-5    KIM Jiyoung                  #167          #160
+  DE    A128   LOSS    13-15  DI CARLO Alessia             #68           #13
+
+  [Coupe du Monde — Greece]
+  Pools: 5/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-0    PHOKAEW Tonkhaw              #166          #232
+  pool  pool   LOSS    3-5    CRISCIO Martina              #80           #58
+  pool  pool   WIN     5-2    LUTEA Tania                  #196          #147
+  pool  pool   WIN     5-4    HENG Juliet Jie Min          #41           #41
+  pool  pool   WIN     5-3    WEBER Christine              #191          #130
+  pool  pool   WIN     5-3    BALDO Zoe Marie              #326          #355
+  DE    B64    LOSS    14-15  VONGSAVADY Malina            #37           #26
+  DE    A64    WIN     15-13  LIN Kesi                     #124          #94
+
+  [Coupe du Monde — Bulgaria]
+  Pools: 4/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-4    LUTEA Tania                  #196          #147
+  pool  pool   LOSS    1-5    CRISCIO Martina              #80           #58
+  pool  pool   WIN     5-4    AIME Amalia                  #107          #85
+  pool  pool   WIN     5-0    ORONOVA Hristina             #398          #447
+  pool  pool   LOSS    0-5    SAIDULLAYEVA Nargiz          #310          #252
+  pool  pool   WIN     5-2    KOBAYASHI Kanae              #108          #69
+  DE    A128   WIN     15-2   MALGREM Klaudia              #228          #188
+  DE    B64    LOSS    5-15   NOUTCHA Sarah                #3            #3
+  DE    A64    WIN     15-8   MATUSZAK Sylwia              #20           #21
+
+  [Coupe du Monde — Peru]
+  Pools: 3/5  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    2-5    HWANG Gabriela Maria Lin     #46           #74
+  pool  pool   LOSS    2-5    TORI Toscane                 #17           #10
+  pool  pool   WIN     5-2    MALGREM Klaudia              #228          #188
+  pool  pool   WIN     5-0    EFFIO Daiara                 #473          #467
+  pool  pool   WIN     5-1    SAYLES Nina                  #148          #135
+  DE    B64    WIN     15-8   MORMILE Chiara               #25           #11
+  DE    B32    LOSS    6-15   ROTILI Claudia               #87           #49
+  DE    A64    WIN     15-13  HERNANDEZ  Elena             #57           #45
+
+======================================================================
+  XU Haojun (CHINA) - 46728
+  FIE Rank: 189  |  PageRank: 47  |  Diff: 142
+  Total Tournaments: 4
+  33 Total Bouts:	16W, 17L (48.5%)
+  23 Pool Bouts:	10W, 13L
+  10 DE Bouts:		6W, 4L
+======================================================================
+
+  [Coupe du Monde — Algeria]
+  Pools: 2/6  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    PEREZ MARTIN Julio Manuel    #188          #123
+  pool  pool   LOSS    1-5    HO Sze Long Aaron            #82           #121
+  pool  pool   WIN     5-2    TE VELDE Noah                #290          #308
+  pool  pool   LOSS    4-5    DESROSIERS Olivier           #49           #107
+  pool  pool   WIN     5-3    ILIASZ Nicolas               #53           #57
+  pool  pool   LOSS    1-5    TRUSHAKOV Alexander          #138          #155
+  DE    A128   WIN     15-8   DRAGOMIR George              #60           #62
+  DE    B64    WIN     0-0    OH Sanguk                    #13           #11
+  DE    B32    LOSS    11-15  MADRIGAL Santiago            #28           #28
+  DE    A64    WIN     15-11  HORVATH Gergo                #212          #260
+
+  [Trophée Luxardo — Italy]
+  Pools: 3/5  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-3    NO NAME: 40                  unranked      #506
+  pool  pool   WIN     5-4    ILIASZ Nicolas               #53           #57
+  pool  pool   LOSS    1-0    NO NAME: 184                 unranked      #199
+  pool  pool   LOSS    1-0    NO NAME: 147                 unranked      #481
+  pool  pool   WIN     5-5    NO NAME: 250                 unranked      #393
+  DE    A128   LOSS    10-15  NO NAME: 73                  unranked      #169
+  DE    A256   WIN     15-8   NO NAME: 54                  unranked      #437
+
+  [Coupe du Monde — Hungary]
+  Pools: 2/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    ZEA Gibran                   #59           #203
+  pool  pool   WIN     5-1    CROFT Liam                   #360          #266
+  pool  pool   WIN     5-1    BRODEN Daniel                #388          #689
+  pool  pool   LOSS    3-5    STASIAK Olaf                 #61           #45
+  pool  pool   LOSS    1-5    SRINUALNAD Voragun           #76           #167
+  pool  pool   LOSS    0-5    BERKESZI  Daniel             #494          #563
+  DE    A128   WIN     15-6   ZEA Gibran                   #59           #203
+  DE    A256   WIN     15-8   PAPAI Roland                 #393          #300
+  DE    A64    LOSS    10-15  VIGH Benedek                 #194          #104
+
+  [ Coupe du monde — Bulgaria]
+  Pools: 3/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    GOSPODINOV Nikola            #358          #217
+  pool  pool   WIN     5-4    PEREZ MARTIN Julio Manuel    #188          #123
+  pool  pool   WIN     5-0    KOLOBAIEV Dmitrii            #476          #540
+  pool  pool   WIN     5-0    TSE Hong Wang                #262          #210
+  pool  pool   LOSS    3-5    URSACHI Razvan               #51           #53
+  pool  pool   LOSS    3-5    DO Gyeongdong                #14           #23
+  DE    A128   LOSS    13-15  GORDON Shaul                 #341          #247
+
+======================================================================
+  D'ARMIENTO Francesco (ITALY) - 24278
+  FIE Rank: 224  |  PageRank: 70  |  Diff: 154
+  Total Tournaments: 3
+  30 Total Bouts:	26W, 4L (86.7%)
+  18 Pool Bouts:	17W, 1L
+  12 DE Bouts:		9W, 3L
+======================================================================
+
+  [Tournoi Satellite — Türkiye]
+  Pools: 5/6  |  DE: 4/5
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-0    OZERDEM Can                  #640          #957
+  pool  pool   WIN     5-3    TE VELDE Noah                #290          #308
+  pool  pool   WIN     5-2    DALEKOV Simeon               #162          #218
+  pool  pool   WIN     5-0    BARIS Efe                    #612          #818
+  pool  pool   LOSS    4-5    RABB Krisztian               #11           #5
+  pool  pool   WIN     5-2    NG James Xuan-Xin            #546          #335
+  DE    A64    WIN     15-7   GUVEN Uluc Eke               #556          #827
+  DE    A32    WIN     15-8   AKPINAR Ali Baris            #436          #448
+  DE    A16    WIN     15-14  MARCIANO Giorgio             #260          #163
+  DE    A8     WIN     15-11  GALLO Michele                #10           #10
+  DE    A4     LOSS    9-15   RABB Krisztian               #11           #5
+
+  [Tournoi satellite — Bulgaria]
+  Pools: 6/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-0    VASILESCU Sergiu             #587          #630
+  pool  pool   WIN     5-2    ATANASOV  Konstantin         #529          #566
+  pool  pool   WIN     5-2    MAJZIK Marton                #622          #843
+  pool  pool   WIN     5-1    URSACHI Razvan               #51           #53
+  pool  pool   WIN     5-4    HRISTOV Hristo               #445          #358
+  pool  pool   WIN     5-1    TAS Alper                    #532          #697
+  DE    A64    WIN     15-8   MATTYUS Sebestyen            #563          #565
+  DE    A32    WIN     15-14  PAPP Zsadany                 #203          #146
+  DE    A16    LOSS    11-15  BONSANTO Francesco           #207          #136
+
+  [Tournoi satellite — Belgium]
+  Pools: 6/6  |  DE: 3/4
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-0    VERDIER Aurelien             #651          #814
+  pool  pool   WIN     5-1    EVANS Joe                    #603          #582
+  pool  pool   WIN     5-4    HRISTOV Hristo               #445          #358
+  pool  pool   WIN     5-2    BILLOD Thomas                #361          #274
+  pool  pool   WIN     5-3    REIFSCHNEIDER Enrico         #535          #477
+  pool  pool   WIN     5-3    VAN KEMENADE Mees            #656          #932
+  DE    A64    WIN     15-9   CHIARI Lukas                 #336          #304
+  DE    A32    WIN     15-6   OLIVEROS Gauthier            #433          #379
+  DE    A16    WIN     15-8   HUSMANN Matthis              #272          #246
+  DE    A8     LOSS    14-15  DENKIEWICZ Benedykt          #84           #58
+
+======================================================================
+  TSUBO Hayato (JAPAN) - 48699
+  FIE Rank: 139  |  PageRank: 63  |  Diff: 76
+  Total Tournaments: 7
+  54 Total Bouts:	36W, 18L (66.7%)
+  41 Pool Bouts:	30W, 11L
+  13 DE Bouts:		6W, 7L
+======================================================================
+
+  [Grand Prix — Tunisia]
+  Pools: 3/5  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-1    MORAN Yago                   #47           #33
+  pool  pool   LOSS    3-5    MARTINE Thomas               #67           #68
+  pool  pool   WIN     5-2    HO Sze Long Aaron            #82           #121
+  pool  pool   WIN     5-3    VIGH Benedek                 #194          #104
+  pool  pool   LOSS    3-5    PARK Jungho                  #132          #127
+  DE    A64    LOSS    7-15   NABIYEV Zhanat               #85           #91
+
+  [Trophée Luxardo — Italy]
+  Pools: 4/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-2    NO NAME: 170                 unranked      #593
+  pool  pool   LOSS    3-5    NO NAME: 204                 unranked      #622
+  pool  pool   WIN     5-1    NO NAME: 3                   unranked      #721
+  pool  pool   WIN     5-0    NO NAME: 228                 unranked      #867
+  pool  pool   WIN     5-2    NO NAME: 246                 unranked      #235
+  pool  pool   LOSS    4-5    NO NAME: 202                 unranked      #234
+  DE    A128   LOSS    13-15  NO NAME: 61                  unranked      #215
+
+  [GRAND PRIX NUOMA  — France]
+  Pools: 5/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    0-5    MARUELLE Francois            #211          #336
+  pool  pool   WIN     5-2    PALACIOS MURILLO Mario Alber #175          #371
+  pool  pool   WIN     5-0    GEOFFROY Quentin Saysana     #415          #718
+  pool  pool   WIN     5-1    GELLETT Charles              #310          #303
+  pool  pool   WIN     5-2    HA Hansol                    #32           #36
+  pool  pool   WIN     5-1    CORTEZ YANCOSEK Cristoher El #145          #328
+  DE    A128   WIN     15-8   WEI Andrew                   #353          #401
+  DE    A64    LOSS    12-15  YAMAN Furkan                 #46           #13
+
+  [Coupe du Monde — Hungary]
+  Pools: 5/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-3    LEO Aan Rohan                #506          #602
+  pool  pool   WIN     5-3    ZHANG Zezhong                #103          #94
+  pool  pool   WIN     5-1    PAPP Zsadany                 #203          #146
+  pool  pool   WIN     5-2    PROSSE Mael                  #510          #397
+  pool  pool   WIN     5-0    CHUPRAKOV Artur              #313          #205
+  pool  pool   LOSS    3-5    PIANFETTI Maxime             #24           #19
+  DE    A128   WIN     15-7   KALENDER Muhammed Furkan     #209          #108
+  DE    B64    LOSS    7-15   TORRE Pietro                 #25           #30
+  DE    A64    WIN     15-12  KUERBIS Jarl                 #304          #233
+
+  [ Coupe du monde — Bulgaria]
+  Pools: 5/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    MATEEV Andri Nikolaysson     #100          #102
+  pool  pool   WIN     5-0    SHOKOUHI Erfan               #333          #461
+  pool  pool   WIN     5-2    DALEKOV Simeon               #162          #218
+  pool  pool   WIN     5-2    SARKISSYAN Artyom            #41           #55
+  pool  pool   WIN     5-2    KOVAL Stsiapan               #154          #162
+  pool  pool   WIN     5-2    ALBASHIR Meshary Salim       #451          #592
+  DE    B64    LOSS    6-15   DO Gyeongdong                #14           #23
+
+  [Grand Prix — Republic of Korea]
+  Pools: 4/6  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-2    PENG Chien-En                #172          #417
+  pool  pool   LOSS    4-5    GARRIGUE Remi                #7            #6
+  pool  pool   LOSS    4-5    BERTINI Cosimo               #226          #124
+  pool  pool   WIN     5-2    KIM Byungsoo                 #698          #781
+  pool  pool   WIN     5-0    GELINAS Marc                 #409          #494
+  pool  pool   WIN     5-3    MATEEV Andri Nikolaysson     #100          #102
+  DE    A128   WIN     15-10  EMURA Ryohei                 #158          #130
+  DE    A64    LOSS    10-15  CHAN Lok Hei Royce           #127          #106
+
+  [Villa de Madrid — Spain]
+  Pools: 4/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    2-5    CAVALIERE Dario              #38           #32
+  pool  pool   WIN     5-2    DUARTE Eduardo               #762          #940
+  pool  pool   LOSS    3-5    SINGH Karan Singh            #54           #88
+  pool  pool   WIN     5-1    ALVAREZ DURAN Pablo          #488          #696
+  pool  pool   WIN     5-4    DI MARTINO Pietro Jose       #322          #326
+  pool  pool   WIN     5-3    BERGER Noe                   #222          #184
+  DE    A128   WIN     15-12  KAJOR Krzysztof              #234          #229
+  DE    B64    LOSS    10-15  AMER Mohamed                 #27           #148
+  DE    A64    WIN     15-14  RABB Krisztian               #11           #5
+
+======================================================================
+  VIGH Benedek (HUNGARY) - 51857
+  FIE Rank: 194  |  PageRank: 104  |  Diff: 90
+  Total Tournaments: 9
+  63 Total Bouts:	29W, 34L (46.0%)
+  51 Pool Bouts:	22W, 29L
+  12 DE Bouts:		7W, 5L
+======================================================================
+
+  [Coupe du Monde — Algeria]
+  Pools: 3/6  |  DE: 0/1
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    4-5    CHANG Hoi Chun               #185          #237
+  pool  pool   LOSS    2-5    MORRILL William              #19           #26
+  pool  pool   LOSS    3-5    KUCHERSKOY Ilya              #206          #222
+  pool  pool   WIN     5-3    BOUREAU Paco                 #98           #111
+  pool  pool   WIN     5-4    ARCHVADZE Vakhtangi          #93           #64
+  pool  pool   WIN     5-1    KAOUECH Mohamed Aziz         #667          #330
+  DE    A128   LOSS    14-15  ZAHEDI Nima                  #137          #95
+
+  [Grand Prix — Tunisia]
+  Pools: 0/5  |  DE: 0/0
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    2-5    MORAN Yago                   #47           #33
+  pool  pool   LOSS    2-5    MARTINE Thomas               #67           #68
+  pool  pool   LOSS    3-5    HO Sze Long Aaron            #82           #121
+  pool  pool   LOSS    1-5    PARK Jungho                  #132          #127
+  pool  pool   LOSS    3-5    TSUBO Hayato                 #139          #63
+
+  [Trophée Luxardo — Italy]
+  Pools: 3/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    2-5    NO NAME: 101                 unranked      #485
+  pool  pool   WIN     5-1    NO NAME: 41                  unranked      #737
+  pool  pool   WIN     5-1    KUERBIS Jarl                 #304          #233
+  pool  pool   WIN     5-2    NO NAME: 260                 unranked      #756
+  pool  pool   LOSS    3-5    NO NAME: 225                 unranked      #313
+  pool  pool   LOSS    1-5    NO NAME: 216                 unranked      #493
+  DE    A128   WIN     15-13  NO NAME: 147                 unranked      #481
+  DE    B64    LOSS    12-15  NO NAME: 68                  unranked      #499
+  DE    A64    WIN     15-14  YAN Yinghui                  #140          #149
+
+  [GRAND PRIX NUOMA  — France]
+  Pools: 1/6  |  DE: 0/0
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    NITU Radu                    #30           #20
+  pool  pool   LOSS    4-5    NUMAJIRI Yoshiaki            #412          #617
+  pool  pool   WIN     5-2    OTTAVIANI Lorenzo            #163          #143
+  pool  pool   LOSS    3-5    THOMPSON Khalil              #269          #227
+  pool  pool   LOSS    1-5    BRONISZEWSKI Marcel          #157          #145
+  pool  pool   LOSS    2-5    LEE Chun Lam Marco           #201          #248
+
+  [Coupe du Monde — Hungary]
+  Pools: 5/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-4    ABBASI Abtin                 #736          #719
+  pool  pool   WIN     5-1    PARDELA Michal               #391          #337
+  pool  pool   WIN     5-0    TAVARTKILADZE Aleksandre     #288          #263
+  pool  pool   LOSS    1-5    MATEEV Andri Nikolaysson     #100          #102
+  pool  pool   WIN     5-4    ALLEN Samuel                 #160          #188
+  pool  pool   WIN     5-3    TSUMORI Shido                #36           #98
+  DE    A128   WIN     15-9   BANYAY Endre Marcell         #454          #472
+  DE    B64    LOSS    6-15   OLLIVIER Leandre             #71           #86
+  DE    A64    WIN     15-10  XU Haojun                    #189          #47
+
+  [ Coupe du monde — Bulgaria]
+  Pools: 0/6  |  DE: 0/0
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    1-5    MARCIANO Giorgio             #260          #163
+  pool  pool   LOSS    2-5    KOKUBO Mao                   #23           #17
+  pool  pool   LOSS    2-5    KASABOV Tervel               #599          #675
+  pool  pool   LOSS    2-5    AYMURATOV Musa               #52           #73
+  pool  pool   LOSS    2-5    LUI Kam Chun                 #455          #610
+  pool  pool   LOSS    3-5    FLOREZ Jaime                 #74           #72
+
+  [Tournoi satellite — Bulgaria]
+  Pools: 4/5  |  DE: 1/2
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-3    CIDU Matei                   #264          #241
+  pool  pool   LOSS    3-5    SIMIONATO Filippo            #596          #682
+  pool  pool   WIN     5-4    FILEV Viktor                 #219          #271
+  pool  pool   WIN     5-1    ZAVIRSEK ZORZ Tei            #448          #720
+  pool  pool   WIN     5-1    ALTINCEKIC Toprak            #279          #238
+  DE    A64    WIN     15-9   ALTINCEKIC Toprak            #279          #238
+  DE    A32    LOSS    13-15  DRAGOMIR George              #60           #62
+
+  [Tournoi satellite — Belgium]
+  Pools: 6/6  |  DE: 2/3
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   WIN     5-4    CROFT Liam                   #360          #266
+  pool  pool   WIN     5-1    FRABOULET Roman              #229          #284
+  pool  pool   WIN     5-0    PLANTINGA Mika               #650          #811
+  pool  pool   WIN     5-3    SAUNDERS Brynmor             #596          #590
+  pool  pool   WIN     5-1    VAN LISHOUT Mats             #657          #927
+  pool  pool   WIN     5-1    FERNANDEZ BLANCO Oscar       #83           #82
+  DE    A64    WIN     15-5   TAFLAN Ahmet Turgut          #514          #381
+  DE    A32    WIN     15-7   CROFT Liam                   #360          #266
+  DE    A16    LOSS    14-15  LEONE Samuel                 #325          #183
+
+  [Villa de Madrid — Spain]
+  Pools: 0/5  |  DE: 0/0
+  Type  Round  Result  Score  Opponent                     Opp FIE Rank  Opp PR Rank
+  ---------------------------------------------------------------------------
+  pool  pool   LOSS    3-5    PATURZO GONZALEZ Emilio      #340          #390
+  pool  pool   LOSS    3-5    KACZKOWSKI Krzysztof         #79           #100
+  pool  pool   LOSS    4-5    ABDAZOV Islambek             #55           #67
+  pool  pool   LOSS    3-5    ZAHEDI Nima                  #137          #95
+  pool  pool   LOSS    2-5    PELOV Stanimir               #329          #259

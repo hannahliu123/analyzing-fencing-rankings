@@ -36,7 +36,7 @@ def get_req_content(tournament_url):
             try:
                 # fencer_url = "https://fie.org/tournament_pages/" + tournament_filename + ".txt"
                 req = requests.get(tournament_url)
-                polite_sleep(4.0, 10.0)
+                polite_sleep(3.0, 8.0)
                 content = req.content
                 with open(path_name, 'wb') as cache_file:
                     cache_file.write(content)
