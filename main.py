@@ -7,7 +7,7 @@ from helper.get_results import get_results_for_division
 save_results = True 
 
 weapon = 'f'
-gender = 'f'
+gender = 'm'
 category = ''
 
 weapon_dict = {'f': "foil", 'e': 'epee', 's': 'sabre'}
