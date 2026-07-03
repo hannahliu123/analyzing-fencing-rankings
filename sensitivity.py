@@ -10,7 +10,7 @@ divisions = [
     ('all_womens_foil',  'Foil',  'Womens', 'Jun_25_2026'),
     ('all_womens_epee',  'Epee',  'Womens', 'Jun_27_2026'),
     ('all_womens_sabre', 'Sabre', 'Womens', 'Jun_26_2026'),
-    ('all_mens_foil',    'Foil',  'Mens',    'Jun_30_2026'),
+    ('all_mens_foil',    'Foil',  'Mens',   'Jun_30_2026'),
     ('all_mens_epee',    'Epee',  'Mens',   'Jun_29_2026'),
     ('all_mens_sabre',   'Sabre', 'Mens',   'Jun_28_2026'),
 ]

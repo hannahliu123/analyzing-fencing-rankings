@@ -155,6 +155,8 @@ pred_log.append(f"  Difference (PR - FIE):   {combined['pr_acc'].mean() - combin
 pred_log.append(f"  Average FIE DE accuracy: {combined['fie_de_acc'].mean():.1%}")
 pred_log.append(f"  Average PR DE accuracy:  {combined['pr_de_acc'].mean():.1%}")
 pred_log.append(f"  Difference (PR - FIE):   {combined['pr_de_acc'].mean() - combined['fie_de_acc'].mean():+.1%}")
+pred_log.append(f"  Total bouts evaluated:    {combined['total'].sum()}")
+pred_log.append(f"  Total DE bouts evaluated: {combined['de_total'].sum()}")
 
 pred_log.append(f"\n  --- By Division ---")
 for (weapon, gender), group in combined.groupby(['weapon', 'gender']):

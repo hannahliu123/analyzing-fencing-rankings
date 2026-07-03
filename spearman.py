@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import spearmanr
 import pandas as pd
 
-comparison_df = pd.read_csv('data_analysis/all_pagerank_fie_comparisons.csv')
+comparison_df = pd.read_csv('data_analysis/all_pagerank_trueskill_fie_comparisons.csv')
 
 # Create data_analysis/fie_spearman_comparisions.csv -----------------------------------------------
 spearman_records = []

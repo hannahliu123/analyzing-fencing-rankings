@@ -1,0 +1,151 @@
+
+===========================================================================
+  PREDICTION TEST — Womens Foil Senior
+  Predict season X+1 bout outcomes using season X rankings
+===========================================================================
+  Season Pair   FIE    TS3    TS2    TS1    TS0    DE FIE  DE TS3  DE TS2  DE TS1  DE TS0 
+  ----------------------------------------------------------------------
+  2022 → 2023   67.6%  70.3%  70.2%  70.0%  69.8%  69.9%   72.0%   72.1%   71.5%   71.7%   
+  2023 → 2024   68.8%  72.0%  72.4%  72.5%  72.3%  68.3%   70.5%   71.5%   72.0%   71.6%   
+  2024 → 2025   68.6%  71.5%  71.8%  72.0%  71.8%  69.2%   71.4%   71.9%   72.2%   71.3%   
+
+  Average FIE accuracy:     68.3%
+  Average TS3 accuracy:     71.3%
+  Average TS2 accuracy:     71.5%
+  Average TS1 accuracy:     71.5%
+  Average TS0 accuracy:     71.3%
+  Average FIE DE accuracy:  69.1%
+  Average TS3 DE accuracy:  71.3%
+  Average TS2 DE accuracy:  71.9%
+  Average TS1 DE accuracy:  71.9%
+  Average TS0 DE accuracy:  71.5%
+
+===========================================================================
+  PREDICTION TEST — Womens Epee Senior
+  Predict season X+1 bout outcomes using season X rankings
+===========================================================================
+  Season Pair   FIE    TS3    TS2    TS1    TS0    DE FIE  DE TS3  DE TS2  DE TS1  DE TS0 
+  ----------------------------------------------------------------------
+  2022 → 2023   65.2%  65.7%  66.0%  66.3%  66.3%  63.9%   63.9%   64.8%   65.9%   66.6%   
+  2023 → 2024   67.3%  69.0%  69.3%  69.2%  69.1%  64.7%   66.1%   65.6%   65.6%   66.1%   
+  2024 → 2025   65.5%  68.2%  68.4%  68.2%  68.5%  63.8%   68.0%   67.8%   67.2%   67.2%   
+
+  Average FIE accuracy:     66.0%
+  Average TS3 accuracy:     67.6%
+  Average TS2 accuracy:     67.9%
+  Average TS1 accuracy:     67.9%
+  Average TS0 accuracy:     68.0%
+  Average FIE DE accuracy:  64.1%
+  Average TS3 DE accuracy:  66.0%
+  Average TS2 DE accuracy:  66.1%
+  Average TS1 DE accuracy:  66.2%
+  Average TS0 DE accuracy:  66.6%
+
+===========================================================================
+  PREDICTION TEST — Womens Sabre Senior
+  Predict season X+1 bout outcomes using season X rankings
+===========================================================================
+  Season Pair   FIE    TS3    TS2    TS1    TS0    DE FIE  DE TS3  DE TS2  DE TS1  DE TS0 
+  ----------------------------------------------------------------------
+  2022 → 2023   65.5%  67.4%  67.5%  67.7%  68.4%  67.0%   69.2%   69.2%   68.6%   69.0%   
+  2023 → 2024   67.6%  69.5%  69.8%  69.8%  69.6%  68.1%   69.4%   69.4%   69.7%   69.6%   
+  2024 → 2025   65.9%  68.5%  68.3%  68.6%  68.1%  66.9%   68.2%   67.5%   68.5%   68.3%   
+
+  Average FIE accuracy:     66.3%
+  Average TS3 accuracy:     68.4%
+  Average TS2 accuracy:     68.5%
+  Average TS1 accuracy:     68.7%
+  Average TS0 accuracy:     68.7%
+  Average FIE DE accuracy:  67.3%
+  Average TS3 DE accuracy:  68.9%
+  Average TS2 DE accuracy:  68.7%
+  Average TS1 DE accuracy:  68.9%
+  Average TS0 DE accuracy:  69.0%
+
+===========================================================================
+  PREDICTION TEST — Mens Sabre Senior
+  Predict season X+1 bout outcomes using season X rankings
+===========================================================================
+  Season Pair   FIE    TS3    TS2    TS1    TS0    DE FIE  DE TS3  DE TS2  DE TS1  DE TS0 
+  ----------------------------------------------------------------------
+  2022 → 2023   67.3%  69.3%  69.4%  69.5%  69.2%  67.6%   69.3%   69.2%   69.3%   69.4%   
+  2023 → 2024   68.8%  70.9%  71.2%  71.2%  70.8%  67.3%   69.6%   70.0%   70.6%   70.4%   
+  2024 → 2025   67.3%  69.7%  69.9%  70.1%  70.0%  66.3%   69.9%   69.5%   69.6%   68.6%   
+
+  Average FIE accuracy:     67.8%
+  Average TS3 accuracy:     70.0%
+  Average TS2 accuracy:     70.2%
+  Average TS1 accuracy:     70.2%
+  Average TS0 accuracy:     70.0%
+  Average FIE DE accuracy:  67.1%
+  Average TS3 DE accuracy:  69.6%
+  Average TS2 DE accuracy:  69.5%
+  Average TS1 DE accuracy:  69.8%
+  Average TS0 DE accuracy:  69.5%
+
+===========================================================================
+  PREDICTION TEST — Mens Epee Senior
+  Predict season X+1 bout outcomes using season X rankings
+===========================================================================
+  Season Pair   FIE    TS3    TS2    TS1    TS0    DE FIE  DE TS3  DE TS2  DE TS1  DE TS0 
+  ----------------------------------------------------------------------
+  2022 → 2023   63.9%  65.3%  65.5%  65.4%  65.2%  62.4%   62.8%   63.7%   64.1%   63.8%   
+  2023 → 2024   64.8%  66.2%  66.4%  66.5%  66.6%  62.8%   64.3%   64.9%   64.9%   64.9%   
+  2024 → 2025   65.0%  66.4%  66.5%  66.6%  66.4%  64.9%   65.1%   64.9%   64.5%   64.7%   
+
+  Average FIE accuracy:     64.6%
+  Average TS3 accuracy:     66.0%
+  Average TS2 accuracy:     66.1%
+  Average TS1 accuracy:     66.2%
+  Average TS0 accuracy:     66.1%
+  Average FIE DE accuracy:  63.4%
+  Average TS3 DE accuracy:  64.1%
+  Average TS2 DE accuracy:  64.5%
+  Average TS1 DE accuracy:  64.5%
+  Average TS0 DE accuracy:  64.4%
+
+===========================================================================
+  PREDICTION TEST — Mens Foil Senior
+  Predict season X+1 bout outcomes using season X rankings
+===========================================================================
+  Season Pair   FIE    TS3    TS2    TS1    TS0    DE FIE  DE TS3  DE TS2  DE TS1  DE TS0 
+  ----------------------------------------------------------------------
+  2022 → 2023   68.5%  69.2%  69.0%  68.7%  68.6%  66.4%   68.0%   67.9%   67.6%   67.9%   
+  2023 → 2024   68.5%  70.6%  70.8%  71.0%  70.9%  68.5%   71.3%   71.6%   72.0%   72.0%   
+  2024 → 2025   67.5%  70.1%  70.3%  70.8%  70.6%  66.6%   69.3%   69.6%   70.2%   70.2%   
+
+  Average FIE accuracy:     68.2%
+  Average TS3 accuracy:     70.0%
+  Average TS2 accuracy:     70.1%
+  Average TS1 accuracy:     70.2%
+  Average TS0 accuracy:     70.0%
+  Average FIE DE accuracy:  67.2%
+  Average TS3 DE accuracy:  69.5%
+  Average TS2 DE accuracy:  69.7%
+  Average TS1 DE accuracy:  69.9%
+  Average TS0 DE accuracy:  70.0%
+
+
+===========================================================================
+  OVERALL SUMMARY — All Divisions Senior
+===========================================================================
+  Average FIE accuracy:    66.9%
+  Average TS3 accuracy:    68.9%
+  Average TS2 accuracy:    69.0%
+  Average TS1 accuracy:    69.1%
+  Average TS0 accuracy:    69.0%
+  Average FIE DE accuracy: 66.4%
+  Average TS3 DE accuracy: 68.2%
+  Average TS2 DE accuracy: 68.4%
+  Average TS1 DE accuracy: 68.6%
+  Average TS0 DE accuracy: 68.5%
+  Total bouts evaluated:    97807
+  Total DE bouts evaluated: 25559
+
+  --- By Division ---
+  Epee Mens: FIE=64.6%  TS3=66.0%  TS2=66.1%  TS1=66.2%  TS0=66.1%  DEFIE=63.4%  DETS3=64.1%  DETS2=64.5%  DETS1=64.5%  DETS0=64.4%  
+  Epee Womens: FIE=66.0%  TS3=67.6%  TS2=67.9%  TS1=67.9%  TS0=68.0%  DEFIE=64.1%  DETS3=66.0%  DETS2=66.1%  DETS1=66.2%  DETS0=66.6%  
+  Foil Mens: FIE=68.2%  TS3=70.0%  TS2=70.1%  TS1=70.2%  TS0=70.0%  DEFIE=67.2%  DETS3=69.5%  DETS2=69.7%  DETS1=69.9%  DETS0=70.0%  
+  Foil Womens: FIE=68.3%  TS3=71.3%  TS2=71.5%  TS1=71.5%  TS0=71.3%  DEFIE=69.1%  DETS3=71.3%  DETS2=71.9%  DETS1=71.9%  DETS0=71.5%  
+  Sabre Mens: FIE=67.8%  TS3=70.0%  TS2=70.2%  TS1=70.2%  TS0=70.0%  DEFIE=67.1%  DETS3=69.6%  DETS2=69.5%  DETS1=69.8%  DETS0=69.5%  
+  Sabre Womens: FIE=66.3%  TS3=68.4%  TS2=68.5%  TS1=68.7%  TS0=68.7%  DEFIE=67.3%  DETS3=68.9%  DETS2=68.7%  DETS1=68.9%  DETS0=69.0%  

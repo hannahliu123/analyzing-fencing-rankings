@@ -111,11 +111,13 @@
   Average FIE DE accuracy: 66.4%
   Average PR DE accuracy:  67.0%
   Difference (PR - FIE):   +0.6%
+  Total bouts evaluated:    97807
+  Total DE bouts evaluated: 25559
 
   --- By Division ---
-  Epee Mens:    FIE=64.6%  PR=65.0%  diff=+0.5%   DEFIE=63.4%  DEPR=63.1%  DEdiff=-0.3%
-  Epee Womens:  FIE=66.0%  PR=66.6%  diff=+0.7%   DEFIE=64.1%  DEPR=65.6%  DEdiff=+1.4%
-  Foil Mens:    FIE=68.2%  PR=68.9%  diff=+0.7%   DEFIE=67.2%  DEPR=68.2%  DEdiff=+1.0%
-  Foil Womens:  FIE=68.3%  PR=69.4%  diff=+1.0%   DEFIE=69.1%  DEPR=69.6%  DEdiff=+0.4%
-  Sabre Mens:   FIE=67.8%  PR=68.7%  diff=+0.9%   DEFIE=67.1%  DEPR=68.3%  DEdiff=+1.2%
+  Epee Mens: FIE=64.6%  PR=65.0%  diff=+0.5%   DEFIE=63.4%  DEPR=63.1%  DEdiff=-0.3%
+  Epee Womens: FIE=66.0%  PR=66.6%  diff=+0.7%   DEFIE=64.1%  DEPR=65.6%  DEdiff=+1.4%
+  Foil Mens: FIE=68.2%  PR=68.9%  diff=+0.7%   DEFIE=67.2%  DEPR=68.2%  DEdiff=+1.0%
+  Foil Womens: FIE=68.3%  PR=69.4%  diff=+1.0%   DEFIE=69.1%  DEPR=69.6%  DEdiff=+0.4%
+  Sabre Mens: FIE=67.8%  PR=68.7%  diff=+0.9%   DEFIE=67.1%  DEPR=68.3%  DEdiff=+1.2%
   Sabre Womens: FIE=66.3%  PR=67.1%  diff=+0.8%   DEFIE=67.3%  DEPR=67.2%  DEdiff=-0.1%

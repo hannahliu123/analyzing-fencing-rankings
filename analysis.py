@@ -2,6 +2,7 @@ from scipy.stats import spearmanr
 import pandas as pd
 import matplotlib.pyplot as plt
 
+ts_df = pd.read_csv('data_analysis/all_trueskill_rankings.csv')
 pagerank_df = pd.read_csv('data_analysis/all_pagerank_rankings.csv')
 fie_df = pd.read_csv('data_analysis/all_fie_rankings.csv')
 
@@ -110,7 +111,7 @@ def make_scatter(ax, df, lim, title, label_these, use_region):
     ax.grid(alpha=0.2)
 
 
-# Create data_analysis/all_pagerank_fie_comparisons.csv --------------------------------------------
+# Create data_analysis/all_pagerank_trueskill_fie_comparisons.csv --------------------------------------------
 comparison_records = []
 for (weapon, gender, category, season), group in pagerank_df.groupby(
     ['weapon', 'gender', 'category', 'season']):
@@ -132,11 +133,22 @@ for (weapon, gender, category, season), group in pagerank_df.groupby(
     comparison_records.append(merged)
 
 comparison_df = pd.concat(comparison_records, ignore_index=True)
+
+ts_cols = ts_df[['id', 'fie_season', 'weapon', 'gender', 'category',
+                'ts_rank_mu', 'ts_rank_1sigma', 'ts_rank_2sigma', 'ts_rank_3sigma']].copy()
+comparison_df = comparison_df.merge(
+    ts_cols,
+    left_on = ['id', 'season', 'weapon', 'gender', 'category'],
+    right_on = ['id', 'fie_season', 'weapon', 'gender', 'category'],
+    how ='left'
+).drop(columns=['fie_season'])
+
 comparison_df = comparison_df[[
     'id', 'name', 'country', 'season', 'weapon', 'gender', 'category',
-    'pagerank_rank', 'pagerank_score', 'fie_rank', 'fie_score', 'rank_diff', 'abs_diff'
+    'pagerank_rank', 'pagerank_score', 'fie_rank', 'fie_score', 'rank_diff', 'abs_diff',
+    'ts_rank_mu', 'ts_rank_1sigma', 'ts_rank_2sigma', 'ts_rank_3sigma'
 ]]
-comparison_df.to_csv('data_analysis/all_pagerank_fie_comparisons.csv', index=False)
+comparison_df.to_csv('data_analysis/all_pagerank_trueskill_fie_comparisons.csv', index=False)
 print(f"Saved {len(comparison_df)} comparison records")
 
 
