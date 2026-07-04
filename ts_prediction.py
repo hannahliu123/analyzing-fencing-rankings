@@ -144,6 +144,7 @@ def run_prediction_test(bout_df, trueskill_df, fie_df, weapon, gender, category,
     
     return {
         'season_x': season_x, 'season_x1': season_x1,  # train, test
+        'fie_correct': fie_correct, 'ts_correct': ts3_correct,
         'fie_acc': fie_acc, 'ts3_acc': ts3_acc, 'ts2_acc': ts2_acc, 'ts1_acc': ts1_acc, 'ts0_acc': ts0_acc, 'total':  total,
         'fie_de_acc': fie_de_acc, 'ts3_de_acc': ts3_de_acc, 'ts2_de_acc': ts2_de_acc, 'ts1_de_acc': ts1_de_acc, 'ts0_de_acc': ts0_de_acc, 'de_total': de_total
     }
@@ -216,6 +217,8 @@ pred_log.append(f"  Average TS2 DE accuracy: {combined['ts2_de_acc'].mean():.1%}
 pred_log.append(f"  Average TS1 DE accuracy: {combined['ts1_de_acc'].mean():.1%}")
 pred_log.append(f"  Average TS0 DE accuracy: {combined['ts0_de_acc'].mean():.1%}")
 # pred_log.append(f"  Difference (PR - FIE):   {combined['pr_de_acc'].mean() - combined['fie_de_acc'].mean():+.1%}")
+pred_log.append(f"  Total FIE correct:       {combined['fie_correct'].sum()}")
+pred_log.append(f"  Total TS correct:        {combined['ts_correct'].sum()}")
 pred_log.append(f"  Total bouts evaluated:    {combined['total'].sum()}")
 pred_log.append(f"  Total DE bouts evaluated: {combined['de_total'].sum()}")
 

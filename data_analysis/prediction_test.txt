@@ -12,9 +12,13 @@
   Average FIE accuracy:     68.3%
   Average PR accuracy:      69.4%
   Difference (PR - FIE):    +1.0%
+  Total FIE Correct:        9455
+  Total PR Correct:         9598
+  Total Bouts:              13832
   Average FIE DE accuracy:  69.1%
   Average PR DE accuracy:   69.6%
   DE Difference (PR - FIE): +0.4%
+  Total DE Bouts:           3687
 
 ===========================================================================
   PREDICTION TEST — Womens Epee Senior
@@ -29,9 +33,13 @@
   Average FIE accuracy:     66.0%
   Average PR accuracy:      66.6%
   Difference (PR - FIE):    +0.7%
+  Total FIE Correct:        11486
+  Total PR Correct:         11606
+  Total Bouts:              17406
   Average FIE DE accuracy:  64.1%
   Average PR DE accuracy:   65.6%
   DE Difference (PR - FIE): +1.4%
+  Total DE Bouts:           4442
 
 ===========================================================================
   PREDICTION TEST — Womens Sabre Senior
@@ -46,9 +54,13 @@
   Average FIE accuracy:     66.3%
   Average PR accuracy:      67.1%
   Difference (PR - FIE):    +0.8%
+  Total FIE Correct:        8135
+  Total PR Correct:         8240
+  Total Bouts:              12262
   Average FIE DE accuracy:  67.3%
   Average PR DE accuracy:   67.2%
   DE Difference (PR - FIE): -0.1%
+  Total DE Bouts:           3226
 
 ===========================================================================
   PREDICTION TEST — Mens Sabre Senior
@@ -63,9 +75,13 @@
   Average FIE accuracy:     67.8%
   Average PR accuracy:      68.7%
   Difference (PR - FIE):    +0.9%
+  Total FIE Correct:        10531
+  Total PR Correct:         10677
+  Total Bouts:              15515
   Average FIE DE accuracy:  67.1%
   Average PR DE accuracy:   68.3%
   DE Difference (PR - FIE): +1.2%
+  Total DE Bouts:           4041
 
 ===========================================================================
   PREDICTION TEST — Mens Epee Senior
@@ -80,9 +96,13 @@
   Average FIE accuracy:     64.6%
   Average PR accuracy:      65.0%
   Difference (PR - FIE):    +0.5%
+  Total FIE Correct:        13430
+  Total PR Correct:         13522
+  Total Bouts:              20796
   Average FIE DE accuracy:  63.4%
   Average PR DE accuracy:   63.1%
   DE Difference (PR - FIE): -0.3%
+  Total DE Bouts:           5389
 
 ===========================================================================
   PREDICTION TEST — Mens Foil Senior
@@ -97,9 +117,13 @@
   Average FIE accuracy:     68.2%
   Average PR accuracy:      68.9%
   Difference (PR - FIE):    +0.7%
+  Total FIE Correct:        12263
+  Total PR Correct:         12403
+  Total Bouts:              17996
   Average FIE DE accuracy:  67.2%
   Average PR DE accuracy:   68.2%
   DE Difference (PR - FIE): +1.0%
+  Total DE Bouts:           4774
 
 
 ===========================================================================
@@ -111,6 +135,8 @@
   Average FIE DE accuracy: 66.4%
   Average PR DE accuracy:  67.0%
   Difference (PR - FIE):   +0.6%
+  Total FIE correct:       65300
+  Total PR correct:        66046
   Total bouts evaluated:    97807
   Total DE bouts evaluated: 25559
 

@@ -139,6 +139,8 @@
   Average TS2 DE accuracy: 68.4%
   Average TS1 DE accuracy: 68.6%
   Average TS0 DE accuracy: 68.5%
+  Total FIE correct:       65300
+  Total TS correct:        67208
   Total bouts evaluated:    97807
   Total DE bouts evaluated: 25559
 

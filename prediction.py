@@ -95,6 +95,7 @@ def run_prediction_test(bout_df, pagerank_df, fie_df, weapon, gender, category,
     
     return {
         'season_x': season_x, 'season_x1': season_x1,  # train, test
+        'fie_correct': fie_correct, 'pr_correct': pr_correct,
         'fie_acc': fie_acc, 'pr_acc': pr_acc, 'total':  total,
         'fie_de_acc': fie_de_acc, 'pr_de_acc': pr_de_acc, 'de_total': de_total
     }
@@ -124,10 +125,14 @@ def run_all_prediction_tests(pagerank_df, fie_df, weapon, gender, category, date
     log_lines.append(f"  Average PR accuracy:      {results_df['pr_acc'].mean():.1%}")
     diff = results_df['pr_acc'].mean() - results_df['fie_acc'].mean()
     log_lines.append(f"  Difference (PR - FIE):    {diff:+.1%}")
+    log_lines.append(f"  Total FIE Correct:        {results_df['fie_correct'].sum()}")
+    log_lines.append(f"  Total PR Correct:         {results_df['pr_correct'].sum()}")
+    log_lines.append(f"  Total Bouts:              {results_df['total'].sum()}")
     log_lines.append(f"  Average FIE DE accuracy:  {results_df['fie_de_acc'].mean():.1%}")
     log_lines.append(f"  Average PR DE accuracy:   {results_df['pr_de_acc'].mean():.1%}")
     diff2 = results_df['pr_de_acc'].mean() - results_df['fie_de_acc'].mean()
     log_lines.append(f"  DE Difference (PR - FIE): {diff2:+.1%}")
+    log_lines.append(f"  Total DE Bouts:           {results_df['de_total'].sum()}")
     
     return results_df
 
@@ -155,6 +160,8 @@ pred_log.append(f"  Difference (PR - FIE):   {combined['pr_acc'].mean() - combin
 pred_log.append(f"  Average FIE DE accuracy: {combined['fie_de_acc'].mean():.1%}")
 pred_log.append(f"  Average PR DE accuracy:  {combined['pr_de_acc'].mean():.1%}")
 pred_log.append(f"  Difference (PR - FIE):   {combined['pr_de_acc'].mean() - combined['fie_de_acc'].mean():+.1%}")
+pred_log.append(f"  Total FIE correct:       {combined['fie_correct'].sum()}")
+pred_log.append(f"  Total PR correct:        {combined['pr_correct'].sum()}")
 pred_log.append(f"  Total bouts evaluated:    {combined['total'].sum()}")
 pred_log.append(f"  Total DE bouts evaluated: {combined['de_total'].sum()}")
 

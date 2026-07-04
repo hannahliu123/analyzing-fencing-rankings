@@ -14,6 +14,13 @@ region_colors = {
     'Other':             '#bababa',
 }
 
+sigma_colors = {
+    0: "#7F7F7F",
+    1: '#d73027',
+    2: "#ff8000",
+    3: "#ffd900",
+}
+
 def get_region(country):
     europe = [
         '_A', 'A_', 'FRANCE', 'ITALY', 'HUNGARY', 'RUSSIA', 'UKRAINE', 'GERMANY',
@@ -72,18 +79,26 @@ def get_region(country):
     print(f"country {country} resulted in an invlaid region")
     return 'Other'
 
-def make_scatter(ax, df, lim, title, label_these, use_region):
-    if use_region:
+def make_scatter(ax, df, lim, title, rank, rank_name, label_these, use_region):
+    if use_region==2:   # based on sigma
+        df = df.copy()
+        for sigma_cat, group in df.groupby('sigma_category'):
+            print(f"the sigma category {sigma_cat} exists with color {sigma_colors[sigma_cat]}")
+            ax.scatter(
+                group['fie_rank'], group[rank],
+                alpha=0.5, s=20, color=sigma_colors[sigma_cat], label=sigma_cat
+            )
+    elif use_region==1:   # based on region
         df = df.copy()
         df['region'] = df['country'].apply(get_region)
         for region, group in df.groupby('region'):
             ax.scatter(
-                group['fie_rank'], group['pagerank_rank'],
+                group['fie_rank'], group[rank],
                 alpha=0.5, s=20, color=region_colors[region], label=region
             )
     else:
         ax.scatter(
-            df['fie_rank'], df['pagerank_rank'],
+            df['fie_rank'], df[rank],
             alpha=0.5, s=20, color='steelblue'
         )
 
@@ -97,18 +112,25 @@ def make_scatter(ax, df, lim, title, label_these, use_region):
             if last_name == "DI": last_name = "DI CARLO"    # heh shhh
             ax.annotate(
                 last_name,
-                xy=(row['fie_rank'], row['pagerank_rank']),
-                xytext=(row['fie_rank'] + lim/110, row['pagerank_rank'] - lim/140),
-                fontsize=7, alpha=0.9
+                xy=(row['fie_rank'], row[rank]),
+                xytext=(row['fie_rank'] + lim/110, row[rank] - lim/140),
+                fontsize=7, alpha=0.8, fontweight='bold'
             )
     
     ax.set_xlim(-lim/100, lim)
     ax.set_ylim(-lim/100, lim)
-    ax.set_xlabel('FIE Rank', fontsize=11)
-    ax.set_ylabel('PageRank Rank', fontsize=11)
+    ax.set_xlabel('Official FIE Rank', fontsize=11)
+    ax.set_ylabel(f'{rank_name} Rank', fontsize=11)
     ax.set_title(title, fontsize=12, fontweight='bold')
-    ax.legend(fontsize=9)
+    ax.legend(loc='lower right', fontsize=9)
+    ax.text(
+        0.02, 0.98, 'Note: Smaller rank values indicate stronger skill\nEx. Rank #1 = Best',
+        transform=ax.transAxes, fontsize=9, color='gray', style='italic', ha='left', va='top',
+        bbox=dict(boxstyle='round,pad=0.5', facecolor='white', edgecolor='lightgray', alpha=0.8)
+    )
+    
     ax.grid(alpha=0.2)
+    print(f"Finished plotting {len(df)} fencers with {rank_name}")
 
 
 # Create data_analysis/all_pagerank_trueskill_fie_comparisons.csv --------------------------------------------
@@ -134,7 +156,7 @@ for (weapon, gender, category, season), group in pagerank_df.groupby(
 
 comparison_df = pd.concat(comparison_records, ignore_index=True)
 
-ts_cols = ts_df[['id', 'fie_season', 'weapon', 'gender', 'category',
+ts_cols = ts_df[['id', 'fie_season', 'weapon', 'gender', 'category', 'mu', 'sigma',
                 'ts_rank_mu', 'ts_rank_1sigma', 'ts_rank_2sigma', 'ts_rank_3sigma']].copy()
 comparison_df = comparison_df.merge(
     ts_cols,
@@ -142,11 +164,19 @@ comparison_df = comparison_df.merge(
     right_on = ['id', 'fie_season', 'weapon', 'gender', 'category'],
     how ='left'
 ).drop(columns=['fie_season'])
+comparison_df['ts_rank_diff'] = comparison_df['fie_rank'] - comparison_df['ts_rank_1sigma']
+comparison_df['ts_abs_diff'] = comparison_df['ts_rank_diff'].abs()
+comparison_df['sigma_category'] = pd.cut(
+    comparison_df['sigma'],
+    bins=[0, 1, 3, 5, float('inf')],
+    labels=[0, 1, 2, 3]
+).astype(int)
 
 comparison_df = comparison_df[[
     'id', 'name', 'country', 'season', 'weapon', 'gender', 'category',
     'pagerank_rank', 'pagerank_score', 'fie_rank', 'fie_score', 'rank_diff', 'abs_diff',
-    'ts_rank_mu', 'ts_rank_1sigma', 'ts_rank_2sigma', 'ts_rank_3sigma'
+    'mu', 'sigma', 'sigma_category',
+    'ts_rank_mu', 'ts_rank_1sigma', 'ts_rank_2sigma', 'ts_rank_3sigma', 'ts_rank_diff', 'ts_abs_diff'
 ]]
 comparison_df.to_csv('data_analysis/all_pagerank_trueskill_fie_comparisons.csv', index=False)
 print(f"Saved {len(comparison_df)} comparison records")
@@ -163,45 +193,78 @@ mens = sabre_2025[sabre_2025['gender'] == 'Mens'].copy()
 
 
 # Decide who to do case studies on
+pr_or_ts = 'ts_rank_1sigma'     # pagerank_rank or ts_rank_1sigma
+diff = 'ts_rank_diff'      # rank_diff or ts_rank_diff
+abs = 'ts_abs_diff'     # abs_diff or ts_abs_diff
 womens_notable = womens[
-    ((womens['pagerank_rank'] <= 100) | (womens['fie_rank'] <= 100)) & (womens['abs_diff'] >= 50)
-].sort_values('abs_diff', ascending=False)
+    ((womens[pr_or_ts] <= 100) | (womens['fie_rank'] <= 100)) & (womens[abs] >= 50)
+].sort_values(abs, ascending=False)
 mens_notable = mens[
-    ((mens['pagerank_rank'] <= 150) | (mens['fie_rank'] <= 150)) & (mens['abs_diff'] >= 50)
-].sort_values('abs_diff', ascending=False)
-print("=== WOMENS SABRE SENIOR 2024/2025 — Top 64 Notable Divergences ===")
-print(womens_notable[['name', 'pagerank_rank', 'fie_rank', 'rank_diff', 'abs_diff']].to_string(index=False))
+    ((mens[pr_or_ts] <= 150) | (mens['fie_rank'] <= 150)) & (mens[abs] >= 50)
+].sort_values(abs, ascending=False)
+print("\n=== WOMENS SABRE SENIOR 2024/2025 — Top 64 Notable Divergences ===")
+print(womens_notable[['name', pr_or_ts, 'fie_rank', diff, abs]].to_string(index=False))
 print("\n=== MENS SABRE SENIOR 2024/2025 — Top 64 Notable Divergences ===")
-print(mens_notable[['name', 'pagerank_rank', 'fie_rank', 'rank_diff', 'abs_diff']].to_string(index=False))
+print(mens_notable[['name', pr_or_ts, 'fie_rank', diff, abs]].to_string(index=False))
 
 womens_labels = [
     'BOUAJINA Aicha', 'REZGUI Yesmine', 'ELDOKSH Renad ',   # way far up
     'KEHLI Zohra Nora', 'BENADOUDA Chaima ', 'HAFEZ Nada', 'HEGAZY Alanoud', 'CARVALHO Isabela',
     'WEI Jiayi', 'KIKUCHI Kokona', 'DI CARLO Alessia']
 mens_labels = [
-    'BOUNABI Akram', 'IBRIHEN Lotfi', 'SAAD Youcef Abdelaziz',  # way far up
+    'BOUNABI Akram', 'SAAD Youcef Abdelaziz',  # way far up
     'ZEA Gibran', 'ROMERO Eliecer', 'AMER Mohamed', 'AKINYOSOYE Oluwafolayemi',
-    "D'ARMIENTO Francesco", 'XU Haojun', 'TSUBO Hayato', 'VIGH Benedek']
+    "D'ARMIENTO Francesco", 'XU Haojun', 'TSUBO Hayato']
 
 
-# Create 2 scatterplots in data_analysis/scatterplot_sabre_2025.png
+# Create 2 scatterplots in data_analysis/pr_scatterplot_sabre_2025.png
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', womens_labels, False)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', mens_labels, False)
+make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', womens_labels, 0)
+make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', mens_labels, 0)
 fig.suptitle('PageRank Rank vs FIE Rank — Sabre Senior 2024/2025',
              fontsize=14, fontweight='bold', y=1.01)
 plt.tight_layout()
-plt.savefig('data_analysis/scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
+plt.savefig('data_analysis/pr_scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
 
 
-# Country-coded Scatterplot
+# Create 2 scatterplots in data_analysis/ts_scatterplot_sabre_2025.png (trueskill vs FIE)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', womens_labels, True)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', mens_labels, True)
+make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 0)
+make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 0)
+fig.suptitle('TrueSkill Rank vs FIE Rank — Sabre Senior 2024/2025',
+             fontsize=14, fontweight='bold', y=1.01)
+plt.tight_layout()
+plt.savefig('data_analysis/ts_scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
+
+
+# Country-coded Scatterplot PageRank
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', womens_labels, 1)
+make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', mens_labels, 1)
 fig.suptitle('PageRank vs FIE Rankings by Region — Sabre Senior 2024/2025',
              fontsize=14, fontweight='bold', y=1.01)
 plt.tight_layout()
-plt.savefig('data_analysis/scatter_sabre_2025_regional.png', dpi=300, bbox_inches='tight')
+plt.savefig('data_analysis/pr_scatter_sabre_2025_regional.png', dpi=300, bbox_inches='tight')
+
+
+# Country-coded Scatterplot TrueSkill
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 1)
+make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 1)
+fig.suptitle('TrueSkill vs FIE Rankings by Region — Sabre Senior 2024/2025',
+             fontsize=14, fontweight='bold', y=1.01)
+plt.tight_layout()
+plt.savefig('data_analysis/ts_scatter_sabre_2025_regional.png', dpi=300, bbox_inches='tight')
+
+
+# Sigma-coded Scatterplot TrueSkill
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 2)
+make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 2)
+fig.suptitle('TrueSkill vs FIE Rankings by Sigma — Sabre Senior 2024/2025',
+             fontsize=14, fontweight='bold', y=1.01)
+plt.tight_layout()
+plt.savefig('data_analysis/ts_scatter_sabre_2025_sigma.png', dpi=300, bbox_inches='tight')
 
 
 # Outlier Details ----------------------------------------------------------------------------------
