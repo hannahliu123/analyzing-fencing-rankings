@@ -105,7 +105,7 @@ colors = {
 }
 
 # PageRank vs FIE Line Graph
-fig, ax = plt.subplots(figsize=(12, 6)) # width, height
+fig, ax = plt.subplots(figsize=(9, 6)) # width, height
 for division, group in senior_df.groupby('division'):
     group = group.sort_values('season_year')  # make sure seasons go left to right
     ax.plot(
@@ -119,18 +119,20 @@ for division, group in senior_df.groupby('division'):
     )
 ax.axhline(y=0, color='black', linewidth=0.8, alpha=0.3)
 ax.axvline(x=2021, color='gray', linestyle='--', alpha=0.6, linewidth=1.5)  # COVID
-ax.text(2021.1, 0.35, 'COVID-19', fontsize=9, color='gray')
-ax.set_xlabel('Season (end year)', fontsize=12)         # x axis
-ax.set_ylabel('Spearman Correlation (ρ)', fontsize=12)  # y axis
-ax.set_title('PageRank vs FIE Senior Rankings — Spearman Correlation by Season',
-             fontsize=13, fontweight='bold')
+ax.text(2021.1, 0.35, 'COVID-19', fontsize=15, color='gray')
+ax.set_xlabel('Season (end year)', fontsize=19)         # x axis
+ax.set_ylabel('Spearman Correlation (ρ)', fontsize=19)  # y axis
+ax.set_title('PageRank vs FIE Senior Rankings\nSpearman Correlation by Season',
+             fontsize=24, fontweight='bold')
 ax.set_ylim(0.3, 1.0)   # y axis range
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
 ax.set_xticks(sorted(senior_df['season_year'].unique()))
-ax.legend(loc='lower right', fontsize=10)   # show legend
+ax.legend(loc='lower right', fontsize=14)   # show legend
 ax.text(
-    0.01, 0.02, 'Note: ρ = 1 indicates perfect positive correlation\nbetween the two ranking systems',
-    transform=ax.transAxes, fontsize=10, color='gray', style='italic', ha='left', va='bottom',
-    bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='lightgray', alpha=0.8)
+    0.02, 0.035, 'Note the dramatic dip during\nCOVID and the lower correlations\nduring the earliest and current\nseasons',
+    transform=ax.transAxes, fontsize=16, color='gray', style='italic', ha='left', va='bottom',
+    bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='lightgray')
 )
 ax.grid(axis='y', alpha=0.3)    # gridlines
 plt.tight_layout()      # prevents labels from being cut off
