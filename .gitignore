@@ -20,5 +20,16 @@ tournaments/tournament_cache.txt
 fencers/athlete_pages/
 tournaments/tournament_pages/
 
-# local output files, once complete will move to final_output 
+# local output files
 output/
+
+# scraping stuff
+main.py
+tournaments/
+pools/
+fencers/
+helper/
+
+initial_testing/
+docs/
+archive/
