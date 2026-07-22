@@ -22,14 +22,3 @@ tournaments/tournament_pages/
 
 # local output files
 output/
-
-# scraping stuff
-main.py
-tournaments/
-pools/
-fencers/
-helper/
-
-initial_testing/
-docs/
-archive/
