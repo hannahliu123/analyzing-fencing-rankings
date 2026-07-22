@@ -26,7 +26,6 @@ Raw bout data was collected using the fie-fencing-dataset scraper
 (amichaelsen, 2021): https://github.com/amichaelsen/fie-fencing-dataset 
 with a few minor edits. Raw bout-level data is available upon request for 
 academic research purposes.  
-Scraping scripts are excluded from this repository. 
 Processed data files are available in data_analysis/.
 
 ## Requirements
