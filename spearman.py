@@ -138,6 +138,40 @@ ax.grid(axis='y', alpha=0.3)    # gridlines
 plt.tight_layout()      # prevents labels from being cut off
 plt.savefig('data_analysis/spearman_by_season.png', dpi=300, bbox_inches='tight')
 
+# Normal PageRank vs FIE Line Graph
+fig, ax = plt.subplots(figsize=(11, 6)) # width, height
+for division, group in senior_df.groupby('division'):
+    group = group.sort_values('season_year')  # make sure seasons go left to right
+    ax.plot(
+        group['season_year'],
+        group['rho'],
+        marker='o',
+        markersize=5,
+        linewidth=2,
+        color=colors.get(division),
+        label=division
+    )
+ax.axhline(y=0, color='black', linewidth=0.8, alpha=0.3)
+ax.axvline(x=2021, color='gray', linestyle='--', alpha=0.6, linewidth=1.5)  # COVID
+ax.text(2021.1, 0.35, 'COVID-19', fontsize=11, color='gray')
+ax.set_xlabel('Season (end year)', fontsize=12)         # x axis
+ax.set_ylabel('Spearman Correlation (ρ)', fontsize=12)  # y axis
+ax.set_title('PageRank vs FIE Senior Rankings — Spearman Correlation by Season',
+             fontsize=13, fontweight='bold')
+ax.set_ylim(0.3, 1.0)
+plt.xticks(fontsize=11)
+plt.yticks(fontsize=11)
+ax.set_xticks(sorted(senior_df['season_year'].unique()))
+ax.legend(loc='lower right', fontsize=11)
+ax.text(
+    0.01, 0.02, 'Note: ρ = 1 indicates perfect positive correlation\nbetween the two ranking systems',
+    transform=ax.transAxes, fontsize=11, color='gray', style='italic', ha='left', va='bottom',
+    bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='lightgray', alpha=0.8)
+)
+ax.grid(axis='y', alpha=0.3)
+plt.tight_layout()
+plt.savefig('data_analysis/spearman_by_season_pr.png', dpi=300, bbox_inches='tight')
+
 # TrueSkill vs FIE Line Graph
 fig, ax = plt.subplots(figsize=(12, 6)) # width, height
 for division, group in senior_df.groupby('division'):
