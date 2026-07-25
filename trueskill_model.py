@@ -60,11 +60,13 @@ for (season, category), season_df in bout_df.groupby(['season', 'category']):
             s[f'rank_{variant}'] = rank     # for all fencers, add rank under each variant
     
     name_lookup = dict(zip(fencer_bio_df['id'], fencer_bio_df['name']))
+    country_lookup = dict(zip(fencer_bio_df['id'], fencer_bio_df['country']))
     for s in scores:
         fid = s['fencer_id']
         name = name_lookup.get(fid, 'Unknown')
+        country = country_lookup.get(fid, 'Unknown')
         trueskill_records.append({
-            'id': fid, 'name': name, 'season': season, 
+            'id': fid, 'name': name, 'season': season, 'country': country,
             'category': category, 'weapon': weapon, 'gender': gender,
             'mu': round(s['mu'], 4), 'sigma': round(s['sigma'], 4),
             'ts_score_3sigma': round(s['ts_score_3sigma'], 4),

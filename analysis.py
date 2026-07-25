@@ -124,11 +124,7 @@ def make_scatter(ax, df, lim, title, rank, rank_name, label_these, use_region):
     ax.set_ylabel(f'{rank_name} Rank', fontsize=11)
     ax.set_title(title, fontsize=13, fontweight='bold')
     ax.legend(loc='lower right', fontsize=9)
-    ax.text(
-        0.02, 0.98, 'Note: Smaller rank values\nindicate stronger skill\nEx. Rank #1 = Best',
-        transform=ax.transAxes, fontsize=9, color='gray', style='italic', ha='left', va='top',
-        bbox=dict(boxstyle='round,pad=0.5', facecolor='white', edgecolor='lightgray', alpha=0.8)
-    )
+    
     ax.grid(alpha=0.2)
     print(f"Finished plotting {len(df)} fencers with {rank_name}")
 
@@ -216,59 +212,62 @@ mens_labels = [
     'ZEA Gibran', 'ROMERO Eliecer', 'AMER Mohamed', 'AKINYOSOYE Oluwafolayemi',
     "D'ARMIENTO Francesco", 'XU Haojun', 'TSUBO Hayato']
 
-
+'''
 # Create 2 scatterplots in data_analysis/pr_scatterplot_sabre_2025.png
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', womens_labels, 0)
-ax1.text(
-    0.025, 0.965, 'Note: Smaller rank values\nindicate stronger skill\nEx. Rank #1 = Best',
-    transform=ax1.transAxes, fontsize=15, color='gray', style='italic', ha='left', va='top',
-    bbox=dict(boxstyle='round,pad=0.5', facecolor='white', edgecolor='lightgray')
-)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', mens_labels, 0)
-fig.suptitle('PageRank Rank vs FIE Rank — Sabre Senior 2024/2025',
-             fontsize=26, fontweight='bold', y=1.01)
-plt.tight_layout()
-plt.savefig('data_analysis/pr_scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
+# fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
+# make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', womens_labels, 0)
+# ax1.text(
+#     0.025, 0.965, 'Note: Smaller rank values\nindicate stronger skill\nEx. Rank #1 = Best',
+#     transform=ax1.transAxes, fontsize=15, color='gray', style='italic', ha='left', va='top',
+#     bbox=dict(boxstyle='round,pad=0.5', facecolor='white', edgecolor='lightgray')
+# )
+# make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', mens_labels, 0)
+# fig.suptitle('PageRank Rank vs FIE Rank — Sabre Senior 2024/2025',
+#              fontsize=26, fontweight='bold', y=1.01)
+# plt.tight_layout()
+# plt.savefig('data_analysis/pr_scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
 
 
 # Create 2 scatterplots in data_analysis/ts_scatterplot_sabre_2025.png (trueskill vs FIE)
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 0)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 0)
-fig.suptitle('TrueSkill Rank vs FIE Rank — Sabre Senior 2024/2025',
-             fontsize=14, fontweight='bold', y=1.01)
-plt.tight_layout()
-plt.savefig('data_analysis/ts_scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
-
+# fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+# make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 0)
+# make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 0)
+# fig.suptitle('TrueSkill Rank vs FIE Rank — Sabre Senior 2024/2025',
+#              fontsize=14, fontweight='bold', y=1.01)
+# plt.tight_layout()
+# plt.savefig('data_analysis/ts_scatterplot_sabre_2025.png', dpi=300, bbox_inches='tight')
+'''
 
 # Country-coded Scatterplot PageRank
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', womens_labels, 1)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', mens_labels, 1)
+make_scatter(ax1, womens, 450, 'Womens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', womens_labels, 1)
+make_scatter(ax2, mens, 800, 'Mens Sabre Senior 2024/2025', 'pagerank_rank', 'PageRank', mens_labels, 1)
 fig.suptitle('PageRank vs FIE Rankings by Region — Sabre Senior 2024/2025',
              fontsize=18, fontweight='bold', y=1.01)
+fig.text(0.5, 0.95, "Note: Smaller rank values indicate stronger skill. Ex. Rank #1 = Best", 
+         fontsize=13, color='gray', ha='center', va='center')
 plt.savefig('data_analysis/print_pr_scatter_sabre_2025_regional.png', dpi=300, bbox_inches='tight')
-
 
 # Country-coded Scatterplot TrueSkill
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 1)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 1)
+make_scatter(ax1, womens, 450, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 1)
+make_scatter(ax2, mens, 800, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 1)
 fig.suptitle('TrueSkill vs FIE Rankings by Region — Sabre Senior 2024/2025',
              fontsize=18, fontweight='bold', y=1.01)
+fig.text(0.5, 0.95, "Note: Smaller rank values indicate stronger skill. Ex. Rank #1 = Best", 
+         fontsize=13, color='gray', ha='center', va='center')
 plt.savefig('data_analysis/print_ts_scatter_sabre_2025_regional.png', dpi=300, bbox_inches='tight')
 
-
+'''
 # Sigma-coded Scatterplot TrueSkill
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
-make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 2)
-make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 2)
-fig.suptitle('TrueSkill vs FIE Rankings by Sigma — Sabre Senior 2024/2025',
-             fontsize=14, fontweight='bold', y=1.01)
-plt.tight_layout()
-plt.savefig('data_analysis/ts_scatter_sabre_2025_sigma.png', dpi=300, bbox_inches='tight')
-
+# fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))
+# make_scatter(ax1, womens, 550, 'Womens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', womens_labels, 2)
+# make_scatter(ax2, mens, 1000, 'Mens Sabre Senior 2024/2025', 'ts_rank_3sigma', 'TrueSkill', mens_labels, 2)
+# fig.suptitle('TrueSkill vs FIE Rankings by Sigma — Sabre Senior 2024/2025',
+#              fontsize=14, fontweight='bold', y=1.01)
+# plt.tight_layout()
+# plt.savefig('data_analysis/ts_scatter_sabre_2025_sigma.png', dpi=300, bbox_inches='tight')
+'''
 
 # Outlier Details ----------------------------------------------------------------------------------
 SEASON     = 2025

@@ -43,8 +43,10 @@ for (season, category), season_df in bout_df.groupby(['season', 'category']):
     for rank, (fencer_id, score) in enumerate(sorted_fencers, start=1):
         names = fencer_bio_df.loc[fencer_bio_df['id'] == fencer_id, 'name']
         name = names.item() if not names.empty else "N/A"
+        countries = fencer_bio_df.loc[fencer_bio_df['id'] == fencer_id, 'country']
+        country = countries.item() if not countries.empty else "N/A"
         pagerank_records.append({
-            'id': fencer_id, 'name': name, 'season': season, 'category': category,
+            'id': fencer_id, 'name': name, 'country': country, 'season': season, 'category': category,
             'weapon': weapon, 'gender': gender, 'pagerank_score': score, 'pagerank_rank':  rank
         })
 
