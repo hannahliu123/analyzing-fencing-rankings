@@ -1,0 +1,144 @@
+
+----------------------------------- MENS PageRank -----------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              rank_diff   R-squared:                       0.117
+Model:                            OLS   Adj. R-squared:                  0.112
+Method:                 Least Squares   F-statistic:                     24.73
+Date:                Fri, 24 Jul 2026   Prob (F-statistic):           3.02e-19
+Time:                        22:52:59   Log-Likelihood:                -4819.1
+No. Observations:                 753   AIC:                             9648.
+Df Residuals:                     748   BIC:                             9671.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const       -185.0448     17.849    -10.367      0.000    -220.086    -150.004
+Americas      10.4056     23.209      0.448      0.654     -35.157      55.968
+Asia          62.9958     20.573      3.062      0.002      22.609     103.383
+Europe       133.9809     19.375      6.915      0.000      95.946     172.016
+Other        -13.0663     51.869     -0.252      0.801    -114.893      88.760
+==============================================================================
+Omnibus:                       43.866   Durbin-Watson:                   0.996
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               50.666
+Skew:                          -0.587   Prob(JB):                     9.95e-12
+Kurtosis:                       3.489   Cond. No.                         11.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Exact MENS PageRank p-values with high precision:
+const: 0.00000000000000000000
+Americas: 0.65403743649780043956
+Asia: 0.00227668493441128463
+Europe: 0.00000000001002167004
+Other: 0.80118003396787762505
+
+----------------------------------- MENS TrueSkill -----------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           ts_rank_diff   R-squared:                       0.091
+Model:                            OLS   Adj. R-squared:                  0.086
+Method:                 Least Squares   F-statistic:                     18.69
+Date:                Fri, 24 Jul 2026   Prob (F-statistic):           1.19e-14
+Time:                        22:52:59   Log-Likelihood:                -4866.9
+No. Observations:                 753   AIC:                             9744.
+Df Residuals:                     748   BIC:                             9767.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const       -165.5373     19.019     -8.704      0.000    -202.875    -128.200
+Americas      26.3105     24.730      1.064      0.288     -22.239      74.860
+Asia          55.9883     21.921      2.554      0.011      12.954      99.023
+Europe       125.0639     20.644      6.058      0.000      84.536     165.592
+Other        -77.0182     55.269     -1.394      0.164    -185.519      31.482
+==============================================================================
+Omnibus:                       67.716   Durbin-Watson:                   1.273
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               87.374
+Skew:                          -0.733   Prob(JB):                     1.06e-19
+Kurtosis:                       3.797   Cond. No.                         11.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Exact MENS TrueSkill p-values with high precision:
+const: 0.00000000000000002035
+Americas: 0.28772084973664113772
+Asia: 0.01084441839193927941
+Europe: 0.00000000218255141786
+Other: 0.16387719357839480860
+
+----------------------------------- WOMENS PageRank -----------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              rank_diff   R-squared:                       0.104
+Model:                            OLS   Adj. R-squared:                  0.099
+Method:                 Least Squares   F-statistic:                     20.31
+Date:                Fri, 24 Jul 2026   Prob (F-statistic):           1.80e-12
+Time:                        22:52:59   Log-Likelihood:                -2965.9
+No. Observations:                 531   AIC:                             5940.
+Df Residuals:                     527   BIC:                             5957.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const        -34.1395      9.872     -3.458      0.001     -53.533     -14.746
+Americas       1.9661     11.841      0.166      0.868     -21.296      25.228
+Asia          30.0261     11.277      2.663      0.008       7.872      52.180
+Europe        54.3283     10.690      5.082      0.000      33.327      75.329
+==============================================================================
+Omnibus:                       44.784   Durbin-Watson:                   1.834
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               63.305
+Skew:                          -0.629   Prob(JB):                     1.79e-14
+Kurtosis:                       4.130   Cond. No.                         8.39
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Exact WOMENS PageRank p-values with high precision:
+const: 0.00058766932972265963
+Americas: 0.86819279674126270674
+Asia: 0.00799204837196092026
+Europe: 0.00000051954454901450
+
+----------------------------------- WOMENS TrueSkill -----------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           ts_rank_diff   R-squared:                       0.078
+Model:                            OLS   Adj. R-squared:                  0.073
+Method:                 Least Squares   F-statistic:                     14.90
+Date:                Fri, 24 Jul 2026   Prob (F-statistic):           2.54e-09
+Time:                        22:52:59   Log-Likelihood:                -3034.4
+No. Observations:                 531   AIC:                             6077.
+Df Residuals:                     527   BIC:                             6094.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const        -40.6977     11.232     -3.623      0.000     -62.763     -18.632
+Americas       8.9528     13.473      0.664      0.507     -17.515      35.420
+Asia          44.1587     12.831      3.441      0.001      18.952      69.365
+Europe        57.5651     12.164      4.733      0.000      33.670      81.460
+==============================================================================
+Omnibus:                       57.127   Durbin-Watson:                   1.904
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               99.049
+Skew:                          -0.680   Prob(JB):                     3.10e-22
+Kurtosis:                       4.621   Cond. No.                         8.39
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Exact WOMENS TrueSkill p-values with high precision:
+const: 0.00031908639033677890
+Americas: 0.50666474886737966621
+Asia: 0.00062445087221698855
+Europe: 0.00000285191256205715

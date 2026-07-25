@@ -1,8 +1,6 @@
 import pandas as pd
 import statsmodels.api as sm
 
-df = pd.read_csv('data_analysis/all_pagerank_trueskill_fie_comparisons.csv')
-
 def get_region(country):
     europe = [
         '_A', 'A_', 'FRANCE', 'ITALY', 'HUNGARY', 'RUSSIA', 'UKRAINE', 'GERMANY',
@@ -61,6 +59,8 @@ def get_region(country):
     print(f"country {country} resulted in an invalid region")
     return 'Other'
 
+df = pd.read_csv('data_analysis/all_pagerank_trueskill_fie_comparisons.csv')
+log = []
 
 filtered_df = df[
     (df["season"] == "2024/2025")
@@ -69,29 +69,39 @@ filtered_df = df[
 ].copy()
 filtered_df["region"] = filtered_df["country"].apply(get_region)
 
-pr_y = filtered_df["rank_diff"]
-ts_y = filtered_df["ts_rank_diff"]
+mens_df = filtered_df[filtered_df["gender"] == "Mens"].copy()
+womens_df = filtered_df[filtered_df["gender"] == "Womens"].copy()
 
-# convert x-vars gender and region to dummy variables
-X_all_dummies = pd.get_dummies(
-    filtered_df[["gender", "region"]], dtype=int, prefix="", prefix_sep=""
+def run_regression(data, target_column, model_label):
+    X_dummies = pd.get_dummies(
+        data[["region"]], dtype=int, prefix="", prefix_sep=""
+    )
+    X = X_dummies.drop(columns=["Africa/Middle East"])
+    X = sm.add_constant(X)
+
+    y = data[target_column]
+
+    model = sm.OLS(y, X).fit()
+    log.append(f"\n" + "-" * 35 + f" {model_label} " + "-" * 35)
+    log.append(model.summary().as_text())
+    p_values = model.pvalues
+    log.append(f"\nExact {model_label} p-values with high precision:")
+    for variable, p_val in p_values.items():    # 20 decimal places
+        log.append(f"{variable}: {p_val:.20f}")
+
+run_regression(     # pr mens
+    mens_df, target_column="rank_diff", model_label="MENS PageRank"
 )
-X = X_all_dummies.drop(columns=["Mens", "Africa/Middle East"])  # baseline/reference groups
-X = sm.add_constant(X)
+run_regression(     # ts mens
+    mens_df, target_column="ts_rank_diff", model_label="MENS TrueSkill"
+)
+run_regression(     # pr womens
+    womens_df, target_column="rank_diff", model_label="WOMENS PageRank"
+)
+run_regression(     # ts womens
+    womens_df, target_column="ts_rank_diff", model_label="WOMENS TrueSkill"
+)
 
-print("\n" + "-" * 25 + " PR MODEL: Target = rank_diff " + "-" * 25)
-pr_model = sm.OLS(pr_y, X).fit()
-print(pr_model.summary())
-pr_p_values = pr_model.pvalues
-print("\nExact PR P-Values with high precision:")
-for variable, p_val in pr_p_values.items():    # 20 decimal places
-    print(f"{variable}: {p_val:.20f}")
-
-
-print("\n" + "-" * 25 + " TS MODEL: Target = rank_diff " + "-" * 25)
-ts_model = sm.OLS(ts_y, X).fit()
-print(ts_model.summary())
-ts_p_values = ts_model.pvalues
-print("\nExact TS P-Values with high precision:")
-for variable, p_val in ts_p_values.items():
-    print(f"{variable}: {p_val:.20f}")
+with open('data_analysis/regression.txt', 'w', encoding='utf-8') as f:
+    f.write('\n'.join(log))
+print("\nSaved regression.txt")
