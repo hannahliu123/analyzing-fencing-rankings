@@ -6,10 +6,10 @@ import pandas as pd
 import os
 from operator import itemgetter
 
-date = 'Jun_30_2026'
-div_name = 'all_mens_foil'
-weapon = "Foil"
-gender = "Mens"
+date = 'Jun_27_2026'
+div_name = 'all_womens_epee'
+weapon = "Epee"
+gender = "Womens"
 
 bout_df            = pd.read_csv('output/'+date+'/'+div_name+ '_bout_data_'            +date+'.csv')
 fencer_bio_df      = pd.read_csv('output/'+date+'/'+div_name+ '_fencer_bio_data_'      +date+'.csv')
@@ -53,6 +53,9 @@ for (season, category), season_df in bout_df.groupby(['season', 'category']):
 # cumulative records
 cumulative_path = 'data_analysis/all_pagerank_rankings.csv'
 pagerank_df = pd.DataFrame(pagerank_records)
+pagerank_df['fie_season'] = pagerank_df['season'].apply(
+    lambda s: f"{int(s)-1}/{int(s)}"
+)
 if os.path.exists(cumulative_path):
     existing = pd.read_csv(cumulative_path)
     combined = pd.concat([existing, pagerank_df], ignore_index=True)
