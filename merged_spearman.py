@@ -86,10 +86,10 @@ fencers_per_category = no_covid.groupby('category')['n_fencers'].agg(
 ).round(2)
 print(fencers_per_category)
 
-'''
+
 # Interpret Spearman Correlation Results (line graph by season)
 senior_df = spearman_df[spearman_df['category'] == 'Senior'].copy()
-senior_df['season_year'] = senior_df['season'].apply(
+senior_df['season_year'] = senior_df['fie_season'].apply(
     lambda s: int(s.split('/')[1])  # 2020/2021 -> 2021 because it fits better on a graph
 )
 senior_df['division'] = senior_df['weapon'] + ' ' + senior_df['gender']
@@ -104,40 +104,6 @@ colors = {
 }
 
 # PageRank vs FIE Line Graph
-fig, ax = plt.subplots(figsize=(9, 6)) # width, height
-for division, group in senior_df.groupby('division'):
-    group = group.sort_values('season_year')  # make sure seasons go left to right
-    ax.plot(
-        group['season_year'],    # x
-        group['rho'],            # y
-        marker='o',              # draw a dot at each data point
-        markersize=5,            # dot size
-        linewidth=2,             # line thickness
-        color=colors.get(division),
-        label=division           # label for the legend
-    )
-ax.axhline(y=0, color='black', linewidth=0.8, alpha=0.3)
-ax.axvline(x=2021, color='gray', linestyle='--', alpha=0.6, linewidth=1.5)  # COVID
-ax.text(2021.1, 0.35, 'COVID-19', fontsize=15, color='gray')
-ax.set_xlabel('Season (end year)', fontsize=19)         # x axis
-ax.set_ylabel('Spearman Correlation (ρ)', fontsize=19)  # y axis
-ax.set_title('PageRank vs FIE Senior Rankings\nSpearman Correlation by Season',
-             fontsize=24, fontweight='bold')
-ax.set_ylim(0.3, 1.0)   # y axis range
-plt.xticks(fontsize=14)
-plt.yticks(fontsize=14)
-ax.set_xticks(sorted(senior_df['season_year'].unique()))
-ax.legend(loc='lower right', fontsize=14)   # show legend
-ax.text(
-    0.02, 0.035, 'Note the dramatic dip during\nCOVID and the lower correlations\nduring the earliest and current\nseasons',
-    transform=ax.transAxes, fontsize=16, color='gray', style='italic', ha='left', va='bottom',
-    bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='lightgray')
-)
-ax.grid(axis='y', alpha=0.3)    # gridlines
-plt.tight_layout()      # prevents labels from being cut off
-plt.savefig('data_analysis/spearman_by_season.png', dpi=300, bbox_inches='tight')
-
-# Normal PageRank vs FIE Line Graph
 fig, ax = plt.subplots(figsize=(11, 6)) # width, height
 for division, group in senior_df.groupby('division'):
     group = group.sort_values('season_year')  # make sure seasons go left to right
@@ -169,10 +135,11 @@ ax.text(
 )
 ax.grid(axis='y', alpha=0.3)
 plt.tight_layout()
-plt.savefig('data_analysis/spearman_by_season_pr.png', dpi=300, bbox_inches='tight')
+plt.savefig('data_analysis/merged_pr_spearman_by_season.png', dpi=300, bbox_inches='tight')
+
 
 # TrueSkill vs FIE Line Graph
-fig, ax = plt.subplots(figsize=(12, 6)) # width, height
+fig, ax = plt.subplots(figsize=(11, 6)) # width, height
 for division, group in senior_df.groupby('division'):
     group = group.sort_values('season_year')  # make sure seasons go left to right
     ax.plot(
@@ -186,20 +153,21 @@ for division, group in senior_df.groupby('division'):
     )
 ax.axhline(y=0, color='black', linewidth=0.8, alpha=0.3)
 ax.axvline(x=2021, color='gray', linestyle='--', alpha=0.6, linewidth=1.5)  # COVID
-ax.text(2021.1, 0.35, 'COVID-19', fontsize=9, color='gray')
+ax.text(2021.1, 0.35, 'COVID-19', fontsize=11, color='gray')
 ax.set_xlabel('Season (end year)', fontsize=12)         # x axis
 ax.set_ylabel('Spearman Correlation (ρ)', fontsize=12)  # y axis
 ax.set_title('TrueSkill vs FIE Senior Rankings — Spearman Correlation by Season',
              fontsize=13, fontweight='bold')
 ax.set_ylim(0.3, 1.0)
+plt.xticks(fontsize=11)
+plt.yticks(fontsize=11)
 ax.set_xticks(sorted(senior_df['season_year'].unique()))
-ax.legend(loc='lower right', fontsize=10)
+ax.legend(loc='lower right', fontsize=11)
 ax.text(
     0.01, 0.02, 'Note: ρ = 1 indicates perfect positive correlation\nbetween the two ranking systems',
-    transform=ax.transAxes, fontsize=10, color='gray', style='italic', ha='left', va='bottom',
+    transform=ax.transAxes, fontsize=11, color='gray', style='italic', ha='left', va='bottom',
     bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='lightgray', alpha=0.8)
 )
 ax.grid(axis='y', alpha=0.3)
 plt.tight_layout()
-plt.savefig('data_analysis/spearman_by_season_ts.png', dpi=300, bbox_inches='tight')
-'''
+plt.savefig('data_analysis/merged_ts_spearman_by_season.png', dpi=300, bbox_inches='tight')
