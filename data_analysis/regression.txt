@@ -1,144 +1,156 @@
 
 ----------------------------------- MENS PageRank -----------------------------------
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:              rank_diff   R-squared:                       0.117
-Model:                            OLS   Adj. R-squared:                  0.112
-Method:                 Least Squares   F-statistic:                     24.73
-Date:                Fri, 24 Jul 2026   Prob (F-statistic):           3.02e-19
-Time:                        22:52:59   Log-Likelihood:                -4819.1
-No. Observations:                 753   AIC:                             9648.
-Df Residuals:                     748   BIC:                             9671.
-Df Model:                           4                                         
-Covariance Type:            nonrobust                                         
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     pr_rank_diff_common   R-squared:                       0.125
+Model:                             OLS   Adj. R-squared:                  0.121
+Method:                  Least Squares   F-statistic:                     35.13
+Date:                 Mon, 27 Jul 2026   Prob (F-statistic):           3.12e-21
+Time:                         10:32:13   Log-Likelihood:                -4555.3
+No. Observations:                  744   AIC:                             9119.
+Df Residuals:                      740   BIC:                             9137.
+Df Model:                            3                                         
+Covariance Type:             nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const       -185.0448     17.849    -10.367      0.000    -220.086    -150.004
-Americas      10.4056     23.209      0.448      0.654     -35.157      55.968
-Asia          62.9958     20.573      3.062      0.002      22.609     103.383
-Europe       133.9809     19.375      6.915      0.000      95.946     172.016
-Other        -13.0663     51.869     -0.252      0.801    -114.893      88.760
+const        -43.3433     13.519     -3.206      0.001     -69.883     -16.804
+Americas     -15.9041     17.578     -0.905      0.366     -50.413      18.605
+Asia          28.2501     15.581      1.813      0.070      -2.339      58.839
+Europe        90.1545     14.674      6.144      0.000      61.347     118.962
 ==============================================================================
-Omnibus:                       43.866   Durbin-Watson:                   0.996
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               50.666
-Skew:                          -0.587   Prob(JB):                     9.95e-12
-Kurtosis:                       3.489   Cond. No.                         11.9
+Omnibus:                       76.336   Durbin-Watson:                   1.098
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              185.401
+Skew:                          -0.561   Prob(JB):                     5.51e-41
+Kurtosis:                       5.173   Cond. No.                         8.12
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 Exact MENS PageRank p-values with high precision:
-const: 0.00000000000000000000
-Americas: 0.65403743649780043956
-Asia: 0.00227668493441128463
-Europe: 0.00000000001002167004
-Other: 0.80118003396787762505
+const: 0.00140292897744696420
+Americas: 0.36587990179622442710
+Asia: 0.07022458349951767043
+Europe: 0.00000000131451117296
 
 ----------------------------------- MENS TrueSkill -----------------------------------
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:           ts_rank_diff   R-squared:                       0.091
-Model:                            OLS   Adj. R-squared:                  0.086
-Method:                 Least Squares   F-statistic:                     18.69
-Date:                Fri, 24 Jul 2026   Prob (F-statistic):           1.19e-14
-Time:                        22:52:59   Log-Likelihood:                -4866.9
-No. Observations:                 753   AIC:                             9744.
-Df Residuals:                     748   BIC:                             9767.
-Df Model:                           4                                         
-Covariance Type:            nonrobust                                         
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     ts_rank_diff_common   R-squared:                       0.090
+Model:                             OLS   Adj. R-squared:                  0.087
+Method:                  Least Squares   F-statistic:                     24.47
+Date:                 Mon, 27 Jul 2026   Prob (F-statistic):           4.20e-15
+Time:                         10:32:13   Log-Likelihood:                -4625.2
+No. Observations:                  744   AIC:                             9258.
+Df Residuals:                      740   BIC:                             9277.
+Df Model:                            3                                         
+Covariance Type:             nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const       -165.5373     19.019     -8.704      0.000    -202.875    -128.200
-Americas      26.3105     24.730      1.064      0.288     -22.239      74.860
-Asia          55.9883     21.921      2.554      0.011      12.954      99.023
-Europe       125.0639     20.644      6.058      0.000      84.536     165.592
-Other        -77.0182     55.269     -1.394      0.164    -185.519      31.482
+const        -47.6269     14.852     -3.207      0.001     -76.784     -18.470
+Americas      -2.5072     19.312     -0.130      0.897     -40.419      35.405
+Asia          25.9651     17.118      1.517      0.130      -7.641      59.571
+Europe        87.6481     16.121      5.437      0.000      56.000     119.297
 ==============================================================================
-Omnibus:                       67.716   Durbin-Watson:                   1.273
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               87.374
-Skew:                          -0.733   Prob(JB):                     1.06e-19
-Kurtosis:                       3.797   Cond. No.                         11.9
+Omnibus:                       83.982   Durbin-Watson:                   1.106
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              180.786
+Skew:                          -0.653   Prob(JB):                     5.53e-40
+Kurtosis:                       5.031   Cond. No.                         8.12
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 Exact MENS TrueSkill p-values with high precision:
-const: 0.00000000000000002035
-Americas: 0.28772084973664113772
-Asia: 0.01084441839193927941
-Europe: 0.00000000218255141786
-Other: 0.16387719357839480860
+const: 0.00140008842805838872
+Americas: 0.89673959363369037945
+Asia: 0.12973739915062612593
+Europe: 0.00000007369358582991
 
 ----------------------------------- WOMENS PageRank -----------------------------------
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:              rank_diff   R-squared:                       0.104
-Model:                            OLS   Adj. R-squared:                  0.099
-Method:                 Least Squares   F-statistic:                     20.31
-Date:                Fri, 24 Jul 2026   Prob (F-statistic):           1.80e-12
-Time:                        22:52:59   Log-Likelihood:                -2965.9
-No. Observations:                 531   AIC:                             5940.
-Df Residuals:                     527   BIC:                             5957.
-Df Model:                           3                                         
-Covariance Type:            nonrobust                                         
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     pr_rank_diff_common   R-squared:                       0.091
+Model:                             OLS   Adj. R-squared:                  0.086
+Method:                  Least Squares   F-statistic:                     17.56
+Date:                 Mon, 27 Jul 2026   Prob (F-statistic):           7.08e-11
+Time:                         10:32:13   Log-Likelihood:                -2954.0
+No. Observations:                  531   AIC:                             5916.
+Df Residuals:                      527   BIC:                             5933.
+Df Model:                            3                                         
+Covariance Type:             nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const        -34.1395      9.872     -3.458      0.001     -53.533     -14.746
-Americas       1.9661     11.841      0.166      0.868     -21.296      25.228
-Asia          30.0261     11.277      2.663      0.008       7.872      52.180
-Europe        54.3283     10.690      5.082      0.000      33.327      75.329
+const        -16.4186      9.653     -1.701      0.090     -35.382       2.544
+Americas     -11.3773     11.579     -0.983      0.326     -34.123      11.369
+Asia          18.4470     11.027      1.673      0.095      -3.215      40.109
+Europe        39.8564     10.453      3.813      0.000      19.321      60.392
 ==============================================================================
-Omnibus:                       44.784   Durbin-Watson:                   1.834
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               63.305
-Skew:                          -0.629   Prob(JB):                     1.79e-14
-Kurtosis:                       4.130   Cond. No.                         8.39
+Omnibus:                       65.615   Durbin-Watson:                   1.165
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              117.208
+Skew:                          -0.754   Prob(JB):                     3.54e-26
+Kurtosis:                       4.739   Cond. No.                         8.39
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 Exact WOMENS PageRank p-values with high precision:
-const: 0.00058766932972265963
-Americas: 0.86819279674126270674
-Asia: 0.00799204837196092026
-Europe: 0.00000051954454901450
+const: 0.08955405628268030271
+Americas: 0.32624880979045733920
+Asia: 0.09494417833288427977
+Europe: 0.00015364115335330693
 
 ----------------------------------- WOMENS TrueSkill -----------------------------------
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:           ts_rank_diff   R-squared:                       0.078
-Model:                            OLS   Adj. R-squared:                  0.073
-Method:                 Least Squares   F-statistic:                     14.90
-Date:                Fri, 24 Jul 2026   Prob (F-statistic):           2.54e-09
-Time:                        22:52:59   Log-Likelihood:                -3034.4
-No. Observations:                 531   AIC:                             6077.
-Df Residuals:                     527   BIC:                             6094.
-Df Model:                           3                                         
-Covariance Type:            nonrobust                                         
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     ts_rank_diff_common   R-squared:                       0.078
+Model:                             OLS   Adj. R-squared:                  0.072
+Method:                  Least Squares   F-statistic:                     14.80
+Date:                 Mon, 27 Jul 2026   Prob (F-statistic):           2.89e-09
+Time:                         10:32:13   Log-Likelihood:                -3034.0
+No. Observations:                  531   AIC:                             6076.
+Df Residuals:                      527   BIC:                             6093.
+Df Model:                            3                                         
+Covariance Type:             nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const        -40.6977     11.232     -3.623      0.000     -62.763     -18.632
-Americas       8.9528     13.473      0.664      0.507     -17.515      35.420
-Asia          44.1587     12.831      3.441      0.001      18.952      69.365
-Europe        57.5651     12.164      4.733      0.000      33.670      81.460
+const        -40.1163     11.223     -3.575      0.000     -62.163     -18.069
+Americas       8.6163     13.462      0.640      0.522     -17.829      35.061
+Asia          43.7546     12.820      3.413      0.001      18.569      68.940
+Europe        57.1404     12.153      4.702      0.000      33.265      81.015
 ==============================================================================
-Omnibus:                       57.127   Durbin-Watson:                   1.904
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               99.049
-Skew:                          -0.680   Prob(JB):                     3.10e-22
-Kurtosis:                       4.621   Cond. No.                         8.39
+Omnibus:                       57.588   Durbin-Watson:                   1.178
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              100.136
+Skew:                          -0.684   Prob(JB):                     1.80e-22
+Kurtosis:                       4.630   Cond. No.                         8.39
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 Exact WOMENS TrueSkill p-values with high precision:
-const: 0.00031908639033677890
-Americas: 0.50666474886737966621
-Asia: 0.00062445087221698855
-Europe: 0.00000285191256205715
+const: 0.00038311730085732265
+Americas: 0.52241254674634785005
+Asia: 0.00069223625224391720
+Europe: 0.00000329990122144478
+
+~~~~~~~~~~~~~~~~~~~~~~~~~ Men's Tabulation Averages ~~~~~~~~~~~~~~~~~~~~~~~~~
+                    pr_rank_diff_common  ts_rank_diff_common
+region                                                      
+Africa/Middle East           -43.343284           -47.626866
+Americas                     -59.247423           -50.134021
+Asia                         -15.093137           -21.661765
+Europe                        46.811170            40.021277
+
+~~~~~~~~~~~~~~~~~~~~~~~~ Women's Tabulation Averages ~~~~~~~~~~~~~~~~~~~~~~~~
+                    pr_rank_diff_common  ts_rank_diff_common
+region                                                      
+Africa/Middle East           -16.418605           -40.116279
+Americas                     -27.795918           -31.500000
+Asia                           2.028369             3.638298
+Europe                        23.437751            17.024096
