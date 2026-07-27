@@ -6,10 +6,10 @@ import pandas as pd
 import os
 from operator import itemgetter
 
-date = 'Jun_27_2026'
-div_name = 'all_womens_epee'
-weapon = "Epee"
-gender = "Womens"
+date = 'Jun_28_2026'
+div_name = 'all_mens_sabre'
+weapon = "Sabre"
+gender = "Mens"
 
 bout_df            = pd.read_csv('output/'+date+'/'+div_name+ '_bout_data_'            +date+'.csv')
 fencer_bio_df      = pd.read_csv('output/'+date+'/'+div_name+ '_fencer_bio_data_'      +date+'.csv')
@@ -35,7 +35,7 @@ for (season, category), season_df in bout_df.groupby(['season', 'category']):
         else:
             G.add_edge(loser_id, winner_id, weight=weight)
     
-    # mess with alpha
+    # run pagerank
     scores = nx.pagerank(G, alpha=0.85, weight='weight')
     sorted_fencers = sorted(scores.items(), key=itemgetter(1), reverse=True)    # g -> l
 

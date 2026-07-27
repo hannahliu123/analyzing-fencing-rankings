@@ -12,68 +12,9 @@ region_colors = {
     'Other':             '#bababa',
 }
 
-def get_region(country):
-    europe = [
-        '_A', 'A_', 'FRANCE', 'ITALY', 'HUNGARY', 'RUSSIA', 'UKRAINE', 'GERMANY',
-        'POLAND', 'ROMANIA', 'GREECE', 'SPAIN', 'BULGARIA', 'BELARUS',
-        'GEORGIA', 'AZERBAIJAN', 'TURKEY', 'SERBIA', 'CROATIA',
-        'CZECH REPUBLIC', 'SLOVAKIA', 'AUSTRIA', 'SWITZERLAND',
-        'BELGIUM', 'NETHERLANDS', 'SWEDEN', 'NORWAY', 'DENMARK',
-        'FINLAND', 'PORTUGAL', 'GREAT BRITAIN', 'ESTONIA', 'LATVIA',
-        'LITHUANIA', 'MOLDOVA', 'ARMENIA', 'LUXEMBOURG', 'IRELAND',
-        'SLOVENIA', 'NORTH MACEDONIA', 'ALBANIA', 'ICELAND',
-        'BOSNIA AND HERZEGOVINA', 'CYPRUS', 'MALTA', 'MONTENEGRO',
-        'ANDORRA', 'SAN MARINO', 'LIECHTENSTEIN'
-    ]
-    asia = [
-        'CHINA', 'KOREA', 'JAPAN', 'KAZAKHSTAN', 'UZBEKISTAN', 
-        'IRAN', 'HONG KONG', 'HONG KONG, CHINA', 'CHINESE TAIPEI',
-        'MONGOLIA', 'INDIA', 'THAILAND', 'SINGAPORE', 'MALAYSIA',
-        'PHILIPPINES', 'INDONESIA', 'VIETNAM', 'KYRGYZSTAN',
-        'TAJIKISTAN', 'TURKMENISTAN', 'BANGLADESH', 'SRI LANKA',
-        'PAKISTAN', 'AFGHANISTAN', 'CAMBODIA', 'MYANMAR', 'NEPAL',
-        'NEW ZEALAND', 'AUSTRALIA', 'BRUNEI DARUSSALAM', "MACAO, CHINA"
-    ]
-    americas = [
-        'UNITED STATES', 'UNITED STATES OF AMERICA', 'USA',
-        'CANADA', 'BRAZIL', 'MEXICO', 'ARGENTINA', 'CUBA',
-        'VENEZUELA', 'COLOMBIA', 'PERU', 'CHILE', 'ECUADOR',
-        'PANAMA', 'DOMINICAN REPUBLIC', 'TRINIDAD AND TOBAGO',
-        'PUERTO RICO', 'URUGUAY', 'PARAGUAY', 'BOLIVIA',
-        'COSTA RICA', 'GUATEMALA', 'HONDURAS', 'EL SALVADOR',
-        'NICARAGUA', 'JAMAICA', 'BARBADOS', 'HAITI', 'GUYANA',
-        'SURINAME', 'BELIZE'
-    ]
-    africa_me = [
-        # North Africa
-        'EGYPT', 'ALGERIA', 'TUNISIA', 'MOROCCO', 'LIBYA', 'SUDAN',
-        # Sub-Saharan Africa
-        'SENEGAL', 'SOUTH AFRICA', 'NIGERIA', 'GHANA', 'CAMEROON',
-        'IVORY COAST', "COTE D'IVOIRE", 'MADAGASCAR', 'KENYA',
-        'ETHIOPIA', 'TANZANIA', 'UGANDA', 'ZIMBABWE', 'ZAMBIA',
-        'MOZAMBIQUE', 'ANGOLA', 'NAMIBIA', 'BOTSWANA', 'TOGO',
-        'BENIN', 'MALI', 'BURKINA FASO', 'NIGER', 'CHAD',
-        'DEMOCRATIC REPUBLIC OF CONGO', 'REPUBLIC OF CONGO',
-        'RWANDA', 'BURUNDI', 'SOMALIA', 'ERITREA', 'DJIBOUTI',
-        'MAURITIUS', 'SEYCHELLES', 'CAPE VERDE', 'GAMBIA',
-        'GUINEA', 'GUINEA-BISSAU', 'SIERRA LEONE', 'LIBERIA',
-        # Middle East
-        'SAUDI ARABIA', 'UAE', 'UNITED ARAB EMIRATES', 'QATAR',
-        'KUWAIT', 'BAHRAIN', 'IRAQ', 'JORDAN', 'LEBANON',
-        'SYRIA', 'ISRAEL', 'PALESTINE', 'OMAN', 'YEMEN'
-    ]
-    
-    if country in europe:   return 'Europe'
-    if country in asia:     return 'Asia'
-    if country in americas: return 'Americas'
-    if country in africa_me: return 'Africa/Middle East'
-    print(f"country {country} resulted in an invlaid region")
-    return 'Other'
-
 def make_scatter(ax, df, lim, title, rank, rank_name, label_these, use_region):
     if use_region==1:   # based on region
         df = df.copy()
-        df['region'] = df['country'].apply(get_region)
         for region, group in df.groupby('region'):
             ax.scatter(
                 group['fie_rank_common'], group[rank],
@@ -123,14 +64,14 @@ mens = sabre_2025[sabre_2025['gender'] == 'Mens'].copy()
 
 
 # Decide who to do case studies on
-pr_or_ts = 'pagerank_rank_common'     # pagerank_rank_common or ts_rank_3sigma_common
-diff = 'pr_rank_diff_common'      # pr_rank_diff_common or ts_rank_diff_common
-abs = 'abs_pr_rank_diff_common'     # abs_pr_rank_diff_common or abs_ts_rank_diff_common
-womens_notable = womens[
-    ((womens[pr_or_ts] <= 100) | (womens['fie_rank_common'] <= 100)) & (womens[abs] >= 50)
+pr_or_ts = 'ts_rank_3sigma_common'     # pagerank_rank_common or ts_rank_3sigma_common
+diff = 'ts_rank_diff_common'      # pr_rank_diff_common or ts_rank_diff_common
+abs = 'abs_ts_rank_diff_common'     # abs_pr_rank_diff_common or abs_ts_rank_diff_common
+womens_notable = womens[ # ((womens['name']=="DI CARLO Alessia") | (womens['name']=="KIKUCHI Kokona")) |
+    (((womens[pr_or_ts] <= 100) | (womens['fie_rank_common'] <= 100)) & (womens[abs] >= 50))
 ].sort_values(abs, ascending=False)
-mens_notable = mens[
-    ((mens[pr_or_ts] <= 150) | (mens['fie_rank_common'] <= 150)) & (mens[abs] >= 50)
+mens_notable = mens[ # (mens['name'] == "XU Haojun") |
+    (((mens[pr_or_ts] <= 150) | (mens['fie_rank_common'] <= 150)) & (mens[abs] >= 50))
 ].sort_values(abs, ascending=False)
 print("\n=== WOMENS SABRE SENIOR 2024/2025 — Top 64 Notable Divergences ===")
 print(womens_notable[['name', pr_or_ts, 'fie_rank_common', diff, abs]].to_string(index=False))
