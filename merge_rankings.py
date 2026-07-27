@@ -10,6 +10,7 @@ fie_df = fie_df.rename(columns={"season": "fie_season"})
 common_keys = ["id", "fie_season", "category", "weapon", "gender"]
 
 fie_df = fie_df[common_keys + ["name", "country", "fie_score", "fie_rank"]].copy()
+fie_df = fie_df.rename(columns={"fie_rank": "fie_rank_common"})
 pagerank_df = pagerank_df[common_keys + ["pagerank_score", "pagerank_rank"]].copy()
 trueskill_df = trueskill_df[common_keys + ["ts_score_3sigma", "ts_rank_3sigma"]].copy()
 
@@ -19,10 +20,6 @@ merged = (
     .merge(trueskill_df, on=common_keys, how="inner")
 )
 
-merged["fie_rank_common"] = (
-    merged.groupby(["fie_season", "category", "weapon", "gender"])["fie_score"]
-    .rank(method="min", ascending=False)
-)
 merged["pagerank_rank_common"] = (
     merged.groupby(["fie_season", "category", "weapon", "gender"])["pagerank_score"]
     .rank(method="min", ascending=False)
