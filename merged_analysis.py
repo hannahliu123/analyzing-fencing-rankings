@@ -108,31 +108,3 @@ fig.text(0.5, 0.95, "Note: Smaller rank values indicate stronger skill. Ex. Rank
          fontsize=13, color='gray', ha='center', va='center')
 plt.savefig('data_analysis/merged_ts_scatter_sabre_2025_regional.png', dpi=300, bbox_inches='tight')
 
-
-# ties
-# rank_cols = {
-#     "FIE": "fie_rank_common",
-#     "PageRank": "pagerank_rank_common",
-#     "TrueSkill": "ts_rank_3sigma_common"
-# }
-
-# rows = []
-
-# for system, col in rank_cols.items():
-#     counts = merged_df[col].value_counts()
-
-#     tied_rank_values = counts[counts > 1]
-#     fencers_in_ties = merged_df[col].isin(tied_rank_values.index).sum()
-
-#     rows.append({
-#         "system": system,
-#         "total_fencers": len(merged_df),
-#         "unique_rank_values": merged_df[col].nunique(),
-#         "tied_rank_values": len(tied_rank_values),
-#         "fencers_in_tied_ranks": fencers_in_ties,
-#         "pct_fencers_in_tied_ranks": 100 * fencers_in_ties / len(merged_df),
-#         "largest_tie_size": tied_rank_values.max() if len(tied_rank_values) > 0 else 1
-#     })
-
-# tie_summary = pd.DataFrame(rows)
-# print(tie_summary)
